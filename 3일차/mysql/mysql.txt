@@ -1,0 +1,51 @@
+구글  : mysql 8.0.27 다운로드
+
+mysql 8.0.27 설치
+custom  모드설치
+  - server, 
+  - workbench
+
+사용자추가 아이디, 비번  
+ (scott, tiger) 예시
+
+ 
+스키마만들기(데이터베이스만들기)
+우클릭-> create schema 
+testdb
+utf8 , utf8_bin  => 적용
+
+--CREATE DATABASE mydatabase; (동일함)
+
+show databases;
+show tables;
+
+use testdb;     =>사용할 데이터베이스를 선택해야 한다.
+--테이블 생성하기
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50),
+    email VARCHAR(100),
+    registration_date DATE
+);
+ 
+
+show tables;
+
+
+select * from users;
+insert into users (name, email, registration_date)  values(  '길동', 'hong@gmail.com', '2023-01-10');
+
+ 
+
+
+select * from users;
+
+insert into users (name, email, registration_date)  values(  '00', 'ddd', '2023-01-10');
+insert into users (name, email, registration_date)  values(  '길동', 'hong@gmail.com', '2023-01-10');
+commit;
+
+select * from users where id= '1';
+
+
+

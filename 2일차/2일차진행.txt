@@ -1,0 +1,70 @@
+
+
+mysql 설치  
+8.0.27 다운로드
+
+
+
+테이블생성
+create table employee(
+    id number(2) , 
+  name varchar2(10) , 
+  salary number(4) ,
+  deptid number(2) , 
+  constraint employee_deptid_fk  FOREIGN KEY(deptid) PREFERENCES department( id) ;
+);
+
+
+테이블삭제:  
+DROP TABLE  deparent  ;
+참조되어지는 테이블을 삭제하려면 다음과 같이 에러가 발생한다
+DTOP TABLE department CASCADE CONSTRAINTS ;
+
+
+민규님  : 파일업로드    Product  product,   MultipartFile file   => 성공 
+테이블컬럼과  dto  속성명 같아야 한다
+
+
+api 데이터베이스 저장 
+pst.addBacth();
+pst.executeBatch()
+
+-2 성공
+
+블로그   datamoney.tistory.com/153
+
+<insert id="insertS" parameterType="java.util.Map">
+    <!-- 이 부분에서 시퀀스의 다음 값을 가져옵니다. -->
+		    <selectKey keyProperty="id" resultType="java.lang.Long" order="BEFORE">
+		        SELECT testseq.NEXTVAL as id FROM dual
+		    </selectKey>
+		    
+		    <!-- 가져온 시퀀스 값을 사용하여 데이터를 삽입합니다. -->
+		    INSERT INTO tests (id, pw, name)
+		    VALUES (#{id}, #{pw}, #{name})
+</insert>
+
+	@RequestMapping("/inserts")
+	public void test3s( ) {		
+		 	try {
+		 		
+		 		
+		 		Map<String, String> item= new HashMap<String, String>();
+		  
+		 		item.put( "pw", "000");
+		 		item.put( "name" , "홍길");
+		 		 
+		 		dao.inserts(item) ;
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	}
+
+
+  public int inserts(Map<String,String> dto) throws Exception {
+        return session.insert(namespace+"insertS", dto);
+    } // int insert(String statement, Object parameter)
+
+
+

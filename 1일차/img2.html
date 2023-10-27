@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .slidewrap{     /*이미지 슬라이드 컨테이너*/
+            height: 400px;
+            width: 850px;
+            border: 1px solid darkgreen;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        ul{
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+        }
+        
+        .slideimg{
+            width: 200px;
+            height: 300px;
+            border: 1px solid black;
+            transition: 1s;
+        }
+
+
+        .slidfirst{
+            background-image: url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&id=b48e96ef-da61-43e4-8ca4-4bc7478384b6&mode=progress);
+        }
+
+        .slidsecond{
+            background-image: url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&id=3e356879-3df4-48f1-b4cb-e80e4ede74ba&mode=progress);
+        }
+
+
+        .slidethird{
+            background-image: url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&id=76a61df0-0ebf-4cdc-be40-913bd87a5dd3&mode=progress);
+        }
+
+
+        .slidefourth{
+            background-image: url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&id=6a2f506d-df77-4d48-980e-53f65ada38dc&mode=progress);
+        }
+
+
+        /* .wrap{
+            display: flex;
+
+
+        } */
+        ul  li{            
+            transition: 1s;
+        }
+
+
+       
+
+    </style>
+
+
+    <script>
+
+
+        let gIndex=-1;   // 0   1   2  3 
+    
+        function a(obj , index){    //마우스 들어갔을 때
+
+            //초기화
+            let slideimgs = document.querySelectorAll(".slideimg");     //slideimg 태그를 가진 요소들을 전부 선택하는 변수 선언
+            if (gIndex != -1) {                // 내가 1번째 그림 선택, 1이 -1과 같지 않으면
+              //   alert(slideimgs[gIndex]);   
+                 slideimgs[gIndex].style.width="200px";     //1번째 그림의 width가 200px이 된다
+            
+            };
+
+           // alert(obj);
+            obj.style.color="red";
+            obj.style.width="600px";    // obj의 넓이가 600px로 만든다
+            gIndex=index;               //gindex의 값은 1로 바뀐다
+
+            
+        }
+
+        function b(obj) {           // 마우스 나올 때
+          //  alert(obj);
+            obj.style.color="black";
+            obj.style.width="200px";    // 나오면 선택했던 객체의 크기가 200px이 된다
+
+            // 선택한 요소의 너비가 커질 수 있도록 한다.
+            c();
+        }      
+
+
+        //선택한 요소의 너비 
+        function c(){
+         let slideimgs  = document.querySelectorAll(".slideimg");
+         slideimgs[gIndex].style.width="600px"; // 선택한 요소의 gindex[2].width가 600이 된다
+        }
+         
+
+    </script>
+
+
+</head>
+<body>
+
+
+  <ul class="slidewrap">
+
+    <li  class="slideimg slidfirst" onmouseover="a(this , 0)"   onmouseout="b(this)">1번째</li>
+
+    <li  class="slideimg slidsecond" onmouseover="a(this , 1)"   onmouseout="b(this)">2번째</li>
+
+    <li  class="slideimg slidethird" onmouseover="a(this , 2)"   onmouseout="b(this)" >3번째</li>
+
+    <li class="slideimg slidefourth" onmouseover="a(this , 3)"   onmouseout="b(this)" >4번째</li>
+    
+  </ul>
+</body>
+</html>

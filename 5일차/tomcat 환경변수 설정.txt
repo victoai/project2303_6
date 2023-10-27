@@ -1,0 +1,6 @@
+tomcat 환경변수 설정
+
+CATALINA_HOME   c:\tomcat9
+Path : %CATALINA_HOME%\bin;
+
+

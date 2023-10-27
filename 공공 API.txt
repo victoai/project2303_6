@@ -1,0 +1,32 @@
+프로젝트 시작1일차
+2023-10-19
+
+
+https://apis.data.go.kr/B551011/KorService1/searchFestival1?
+numOfRows=10&
+pageNo=1&
+MobileOS=ETC&
+MobileApp=EventData&
+_type=json&
+listYN=Y
+&arrange=A
+&eventStartDate=20231019
+&areaCode=1
+&serviceKey=sk0fN5MZZJs6cMbwwsAn%2FpTZblp1SHKLXTLub%2B12Crs2MRm%2FUoq480WTck8TWAFE9V2kQQMOMGfhOiyo4MBw%2BA%3D%3D
+
+ 
+
+https://apis.data.go.kr/B551011/KorService1/searchFestival1?
+numOfRows=10&
+pageNo=1&
+_type=json&
+listYN=Y
+&arrange=A
+&eventStartDate=20231019
+&areaCode=1
+&serviceKey=sk0fN5MZZJs6cMbwwsAn%2FpTZblp1SHKLXTLub%2B12Crs2MRm%2FUoq480WTck8TWAFE9V2kQQMOMGfhOiyo4MBw%2BA%3D%3D
+
+ 
+공공데이터 데이터 요청방법
+공공데이터포털 API 받아오기
+https://codding-child.tistory.com/40#article-2-5--postman

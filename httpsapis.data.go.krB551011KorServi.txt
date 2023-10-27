@@ -1,0 +1,14 @@
+https://apis.data.go.kr/B551011/KorService1/searchFestival1?
+numOfRows=10&
+pageNo=1&
+MobileOS=ETC&
+MobileApp=EventData&
+_type=json&
+listYN=Y
+&arrange=A
+&eventStartDate=20231019
+&areaCode=1
+&serviceKey=sk0fN5MZZJs6cMbwwsAn%2FpTZblp1SHKLXTLub%2B12Crs2MRm%2FUoq480WTck8TWAFE9V2kQQMOMGfhOiyo4MBw%2BA%3D%3D
+
+
+ 

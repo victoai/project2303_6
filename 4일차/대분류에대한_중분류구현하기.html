@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    
+
+    <select id="big">
+        <option value="대분류1">대분류1</option>
+        <option value="대분류2">대분류2</option>
+        <option value="대분류3">대분류3</option>
+    </select>
+
+    <select id="middle">
+     
+    </select>
+      
+
+    <script>
+  
+        let  category= {  대분류1:[ "냉장고" , "세탁기" , "청소기"] ,  대분류2:[ "가구" , "침대" , "청소기"] , 대분류3:[ "식품" , "빵" , "오렌지"]}
+
+
+
+        //먼저 대분류1에 대한 항목으로 중분류 세팅
+        category.대분류1.forEach(  function(item){
+                    $("#middle").append(`<option> ${item}</option>`);
+        }); 
+
+
+        $("#big").on( "change" , function(){
+             //alert("dkfkfkf");
+             // alert(this.value);
+              let key = this.value;   //선택한 대분류 value가져오기 
+
+              // 중분류 항목  초기화
+              $("#middle").empty();
+           
+              if( key=="대분류1") {
+                category.대분류1.forEach(  function(item){
+                    $("#middle").append(`<option> ${item}</option>`);
+                }); 
+            }else if( key=="대분류2"){
+                category.대분류2.forEach(  function(item){
+                    $("#middle").append(`<option> ${item}</option>`);
+                }); 
+            }else if( key=="대분류3"){
+                category.대분류3.forEach(  function(item){
+                    $("#middle").append(`<option> ${item}</option>`);
+                }); 
+            }
+             
+        });
+        
+
+        $("#middle").on( "change" , function(){
+               alert("수행해야 할 코드");
+        });
+    </script>
+</body>
+</html>

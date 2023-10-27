@@ -1,0 +1,19 @@
+
+package com.visitKorea.searchapi;
+
+import java.util.ArrayList;
+
+public interface TourDAO<T> {
+
+    void insertAll(ArrayList<T> list);
+}
+
+
+
+public class TourDAOImpl<T> implements TourDAO<AREADTO> {
+
+    @Override
+    public void insertAll(ArrayList<AREADTO> list) {
+     
+    }
+}

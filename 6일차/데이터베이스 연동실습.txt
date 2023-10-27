@@ -1,0 +1,61 @@
+
+public class DBTest1 {
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		 //연결정보
+		String driver = "oracle.jdbc.driver.OracleDriver" ;
+		String url="jdbc:oracle:thin:@localhost:1521:testdb";
+		String user="scott";
+		String password="tiger";
+		
+
+		//오라클 드라이버 로딩
+
+
+
+
+                // 데이터베이스 연결 
+
+
+
+
+                // sql 작성
+
+
+
+
+
+               // 연결된 객체로 부터 문장을 얻어오고 실행하기 
+		  
+
+
+
+
+               //실행결과 출력하기
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              
+		 
+	}
+}

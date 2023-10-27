@@ -1,0 +1,18 @@
+한국관광공사_국문 관광정보 서비스 _GW
+
+
+https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15101578#/API%20%EB%AA%A9%EB%A1%9D/areaBasedList1
+
+
+
+지역기반 관광정보조회
+/areaBasedList1
+
+
+https://apis.data.go.kr/B551011/KorService1/areaBasedList1?MobileOS=ETC&MobileApp=abc&_type=json&arrange=D&serviceKey=sk0fN5MZZJs6cMbwwsAn%2FpTZblp1SHKLXTLub%2B12Crs2MRm%2FUoq480WTck8TWAFE9V2kQQMOMGfhOiyo4MBw%2BA%3D%3D
+
+
+
+
+서비스키 : sk0fN5MZZJs6cMbwwsAn/pTZblp1SHKLXTLub+12Crs2MRm/Uoq480WTck8TWAFE9V2kQQMOMGfhOiyo4MBw+A==
+ETC ,  abc  , D ,   json

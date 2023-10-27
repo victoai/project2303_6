@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+
+        ul, li{
+            margin: 0px;
+            padding: 0px;            
+            list-style: none;
+        }
+
+        /* header 높이 60px*/
+        .header{   
+            height: 60px;  /* 높이가 있어야 overflow hidden이 적용될 수 있다.*/         
+            overflow: hidden;
+            transition: 1s;
+
+            position: fixed;
+            left: 0px;
+            width: 100%;
+            z-index: 99;
+        }
+
+
+        /* 호버시 높이가 늘어난다*/
+        .header:hover {
+            height: 360px;  /*  height:auto   =>  높이가 늘어난다 */
+        }
+ 
+
+        /* header  - row1, row2 로 구성되어 있다.*/
+        .row1{
+            height: 60px;      
+            display: flex;
+            background-color: aqua;
+
+        }
+        .row2{
+            height: 300px;
+            border: 1px solid black;
+            background-color: antiquewhite;
+        }
+
+        /* row1을 3개로 구성할 수 있다*/
+        .logo{
+            flex:1;
+        }
+        .menu{
+            flex:4;
+            display: flex;
+        }
+        .search{
+            flex:1;
+        }
+
+       
+
+        .menu > li{
+            flex: 1;
+            height: 60px;
+            border:1px solid black;
+            text-align: center;
+        }
+
+        
+        .title{
+            display: block;
+            height: 60px;
+            line-height: 60px;
+        }
+
+        main{
+            height: 2000px;
+        }
+
+      
+    </style>
+</head>
+<body>
+    
+    <div class="header">
+        <div class="row1">
+            <div class="logo">로고</div>
+            <ul class="menu">
+                <li> <a  href="#" class="title">메뉴1   </a> 
+                    <ul>
+                        <li>하위</li>
+                        <li>하위</li>
+                        <li>하위</li>
+                        <li>하위</li>
+                        <li>하위</li>
+                    </ul>
+                </li>
+                <li> <a  href="#" class="title">메뉴1   </a>
+                    <ul>
+                        <li>하위</li>
+                        <li>하위</li>
+                        <li>하위</li>
+                        <li>하위</li>
+                        <li>하위</li>
+                    </ul>  
+                <li> <a  href="#" class="title">메뉴1   </a> 
+
+            </ul>
+            <div class="search">검색바</div>
+        </div>
+        <div class="row2"></div>
+    </div>
+
+    <main>
+
+        <ul>
+            <li>dfd</li>
+            <li>dfd</li>
+            <li>dfd</li>
+            <li>dfd</li>
+            <li>dfd</li>
+            <li>dfd</li>
+            
+        </ul>
+    </main>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 태그 파트 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        header {
+            background-color: #48D1CC;
+            height: 100px;
+        }
+
+        section {}
+
+        footer {}
+
+        button {
+            outline: none;
+            cursor: pointer;
+            /* 손가락모양 */
+        }
+
+        /* 해더 */
+        .headerwrap {
+            width: 1280px;
+            border: 1px solid black;
+            height: 100px;
+            margin: 0 auto;
+        }
+
+        /* 세션 */
+        /* 풋터 */
+
+        ul,
+        li {
+            margin: 10px;
+        }
+
+        .section-cart-title {
+            border-bottom: 1px solid black;
+        }
+
+
+
+        .section-cart-box {
+            width: 900px;
+            border-bottom: 1px solid black;
+            height: 300px;
+
+        }
+
+        .section-cart-inner {
+            width: 700px;
+            border: 1px solid black;
+            height: 300px;
+            margin: 0 auto;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+        }
+
+
+
+        .section-cart-storeinfo-img {
+            width: 100px;
+        }
+
+        .section-cart-menuname-wrap {
+            display: flex;
+            border: 1px solid black;
+        }
+
+        .section-cart-menuname {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .section-cart-menuinfo-wrap {
+            display: flex;
+            border: 1px solid black;
+        }
+
+        .section-cart-menuinfo-img {
+            width: 125px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="headerwrap">해더</div>
+    </header>
+
+    <section>
+        <div class="section-cart-title">
+            <h1>장바구니</h1>
+        </div>
+
+        <div class="section-cart-box">
+            <div class="section-cart-inner">
+
+                <div class="section-cart-storeinfo">
+                    <img class="section-cart-storeinfo-img" src="./쉑쉑버거.jpg"> shake shack
+                </div>
+
+                <div>
+                    <div class="section-cart-menuname"><span>쉑버거</span><img src="./취소.png"></div>
+
+
+                    <div class="section-cart-menuinfo-wrap">
+                        <div><img class="section-cart-menuinfo-img" src="./쉑버거.jpg"></div>
+                        <div>
+                            <ul>
+                                <li>A</li>
+                                <li>B</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+    </section>
+    <footer>
+    </footer>
+
+</body>
+
+</html>

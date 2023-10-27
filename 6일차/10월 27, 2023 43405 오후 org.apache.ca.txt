@@ -1,0 +1,235 @@
+10월 27, 2023 4:34:05 오후 org.apache.catalina.startup.VersionLoggerListener log
+INFO: 서버 버전 이름:    Apache Tomcat/9.0.82
+10월 27, 2023 4:34:05 오후 org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server 빌드 시각:  Oct 11 2023 13:15:08 UTC
+10월 27, 2023 4:34:05 오후 org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server 버전 번호:  9.0.82.0
+10월 27, 2023 4:34:05 오후 org.apache.catalina.startup.VersionLoggerListener log
+INFO: 운영체제 이름:     Windows 11
+10월 27, 2023 4:34:05 오후 org.apache.catalina.startup.VersionLoggerListener log
+INFO: 운영체제 버전:     10.0
+10월 27, 2023 4:34:05 오후 org.apache.catalina.startup.VersionLoggerListener log
+INFO: 아키텍처:          amd64
+10월 27, 2023 4:34:05 오후 org.apache.catalina.startup.VersionLoggerListener log
+INFO: 자바 홈:           C:\Program Files\Java\jdk-11
+10월 27, 2023 4:34:05 오후 org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM 버전:          11.0.18+9-LTS-195
+10월 27, 2023 4:34:05 오후 org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM 벤더:          Oracle Corporation
+10월 27, 2023 4:34:05 오후 org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:     C:\Users\khs22\Desktop\배달의민족\FinalProject\.metadata\.plugins\org.eclipse.wst.server.core\tmp0
+10월 27, 2023 4:34:05 오후 org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:     C:\apache-tomcat-9.0.82
+10월 27, 2023 4:34:05 오후 org.apache.catalina.startup.VersionLoggerListener log
+INFO: 명령 행 아규먼트:  -Dcatalina.base=C:\Users\khs22\Desktop\배달의민족\FinalProject\.metadata\.plugins\org.eclipse.wst.server.core\tmp0
+10월 27, 2023 4:34:05 오후 org.apache.catalina.startup.VersionLoggerListener log
+INFO: 명령 행 아규먼트:  -Dcatalina.home=C:\apache-tomcat-9.0.82
+10월 27, 2023 4:34:05 오후 org.apache.catalina.startup.VersionLoggerListener log
+INFO: 명령 행 아규먼트:  -Dwtp.deploy=C:\Users\khs22\Desktop\배달의민족\FinalProject\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps
+10월 27, 2023 4:34:05 오후 org.apache.catalina.startup.VersionLoggerListener log
+INFO: 명령 행 아규먼트:  --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+10월 27, 2023 4:34:05 오후 org.apache.catalina.startup.VersionLoggerListener log
+INFO: 명령 행 아규먼트:  --add-opens=java.base/java.io=ALL-UNNAMED
+10월 27, 2023 4:34:05 오후 org.apache.catalina.startup.VersionLoggerListener log
+INFO: 명령 행 아규먼트:  --add-opens=java.base/java.util=ALL-UNNAMED
+10월 27, 2023 4:34:05 오후 org.apache.catalina.startup.VersionLoggerListener log
+INFO: 명령 행 아규먼트:  --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+10월 27, 2023 4:34:05 오후 org.apache.catalina.startup.VersionLoggerListener log
+INFO: 명령 행 아규먼트:  --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+10월 27, 2023 4:34:05 오후 org.apache.catalina.startup.VersionLoggerListener log
+INFO: 명령 행 아규먼트:  -Dfile.encoding=MS949
+10월 27, 2023 4:34:05 오후 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: APR 버전 [1.7.4]을(를) 사용한, APR 기반 Apache Tomcat Native 라이브러리 [1.2.39]을(를) 로드했습니다.
+10월 27, 2023 4:34:05 오후 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: APR 용량정보들: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+10월 27, 2023 4:34:05 오후 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: APR/OpenSSL 설정: useAprConnector [false], useOpenSSL [true]
+10월 27, 2023 4:34:05 오후 org.apache.catalina.core.AprLifecycleListener initializeSSL
+INFO: OpenSSL이 성공적으로 초기화되었습니다: [OpenSSL 3.0.11 19 Sep 2023]
+10월 27, 2023 4:34:06 오후 org.apache.coyote.AbstractProtocol init
+INFO: 프로토콜 핸들러 ["http-nio-8080"]을(를) 초기화합니다.
+10월 27, 2023 4:34:06 오후 org.apache.catalina.startup.Catalina load
+INFO: [721] 밀리초 내에 서버가 초기화되었습니다.
+10월 27, 2023 4:34:06 오후 org.apache.catalina.core.StandardService startInternal
+INFO: 서비스 [Catalina]을(를) 시작합니다.
+10월 27, 2023 4:34:06 오후 org.apache.catalina.core.StandardEngine startInternal
+INFO: 서버 엔진을 시작합니다: [Apache Tomcat/9.0.82]
+10월 27, 2023 4:34:06 오후 org.apache.catalina.util.SessionIdGeneratorBase createSecureRandom
+WARNING: [SHA1PRNG] 알고리즘을 사용하여, 세션 ID를 생성하기 위한 SecureRandom 객체를 생성하는데, [192] 밀리초가 소요됐습니다.
+10월 27, 2023 4:34:08 오후 org.apache.jasper.servlet.TldScanner scanJars
+INFO: 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+10월 27, 2023 4:34:08 오후 org.apache.catalina.core.ApplicationContext log
+INFO: No Spring WebApplicationInitializer types detected on classpath
+log4j:ERROR Could not parse url [file:/C:/Users/khs22/Desktop/배달의민족/FinalProject/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/AcornFinalProject/WEB-INF/classes/log4j.xml].
+com.sun.org.apache.xerces.internal.util.URI$MalformedURIException: Path contains invalid character: 배
+	at java.xml/com.sun.org.apache.xerces.internal.util.URI.initializePath(URI.java:1110)
+	at java.xml/com.sun.org.apache.xerces.internal.util.URI.initialize(URI.java:583)
+	at java.xml/com.sun.org.apache.xerces.internal.util.URI.<init>(URI.java:336)
+	at java.xml/com.sun.org.apache.xerces.internal.util.URI.<init>(URI.java:299)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.expandSystemIdStrictOff1(XMLEntityManager.java:2393)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.expandSystemId(XMLEntityManager.java:2239)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.resolveEntityAsPerStax(XMLEntityManager.java:996)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$DTDDriver.dispatch(XMLDocumentScannerImpl.java:1142)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$DTDDriver.next(XMLDocumentScannerImpl.java:1040)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:943)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:534)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:888)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:246)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:178)
+	at org.apache.log4j.xml.DOMConfigurator$2.parse(DOMConfigurator.java:690)
+	at org.apache.log4j.xml.DOMConfigurator.doConfigure(DOMConfigurator.java:789)
+	at org.apache.log4j.xml.DOMConfigurator.doConfigure(DOMConfigurator.java:696)
+	at org.apache.log4j.helpers.OptionConverter.selectAndConfigure(OptionConverter.java:471)
+	at org.apache.log4j.LogManager.<clinit>(LogManager.java:125)
+	at org.slf4j.impl.Log4jLoggerFactory.getLogger(Log4jLoggerFactory.java:64)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:270)
+	at org.apache.commons.logging.impl.SLF4JLogFactory.getInstance(SLF4JLogFactory.java:156)
+	at org.apache.commons.logging.impl.SLF4JLogFactory.getInstance(SLF4JLogFactory.java:132)
+	at org.apache.commons.logging.LogFactory.getLog(LogFactory.java:272)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:267)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:103)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4462)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4914)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:794)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:248)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:921)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:772)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:347)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:478)
+10월 27, 2023 4:34:08 오후 org.apache.catalina.core.ApplicationContext log
+INFO: Initializing Spring root WebApplicationContext
+log4j:WARN No appenders could be found for logger (org.springframework.web.context.ContextLoader).
+log4j:WARN Please initialize the log4j system properly.
+10월 27, 2023 4:34:09 오후 org.apache.catalina.core.StandardContext listenerStart
+SEVERE: Context initialized 이벤트를 [org.springframework.web.context.ContextLoaderListener] 클래스의 인스턴스인 리스너에 전송하는 동안 예외 발생
+org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from ServletContext resource [/WEB-INF/spring/root-context.xml]; nested exception is java.io.FileNotFoundException: Could not open ServletContext resource [/WEB-INF/spring/root-context.xml]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:343)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:303)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:187)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:194)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:133)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:621)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:522)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:409)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:291)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:103)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4462)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4914)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:794)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:248)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:921)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:772)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:347)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:478)
+Caused by: java.io.FileNotFoundException: Could not open ServletContext resource [/WEB-INF/spring/root-context.xml]
+	at org.springframework.web.context.support.ServletContextResource.getInputStream(ServletContextResource.java:159)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:329)
+	... 42 more
+
+10월 27, 2023 4:34:09 오후 org.apache.catalina.core.StandardContext startInternal
+SEVERE: 하나 이상의 리스너들이 시작하지 못했습니다. 상세 내역은 적절한 컨테이너 로그 파일에서 찾을 수 있습니다.
+10월 27, 2023 4:34:09 오후 org.apache.catalina.core.StandardContext startInternal
+SEVERE: 이전 오류들로 인해 컨텍스트 [/final]의 시작이 실패했습니다.
+10월 27, 2023 4:34:09 오후 org.apache.catalina.core.ApplicationContext log
+INFO: Closing Spring root WebApplicationContext
+10월 27, 2023 4:34:09 오후 org.apache.catalina.core.StandardContext listenerStop
+SEVERE: 클래스 [org.springframework.web.context.ContextLoaderListener]의 인스턴스인 리스너에게 contextDestroyed 이벤트를 전송하는 중 예외 발생
+java.lang.IllegalStateException: BeanFactory not initialized or already closed - call 'refresh' before accessing beans via the ApplicationContext
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.getBeanFactory(AbstractRefreshableApplicationContext.java:176)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1041)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1017)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:967)
+	at org.springframework.web.context.ContextLoader.closeWebApplicationContext(ContextLoader.java:525)
+	at org.springframework.web.context.ContextLoaderListener.contextDestroyed(ContextLoaderListener.java:112)
+	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:4508)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5147)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:242)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:175)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:794)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:248)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:921)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:772)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:347)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:478)
+
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.catalina.loader.WebappClassLoaderBase (file:/C:/apache-tomcat-9.0.82/lib/catalina.jar) to field java.lang.Thread.threadLocals
+WARNING: Please consider reporting this to the maintainers of org.apache.catalina.loader.WebappClassLoaderBase
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+10월 27, 2023 4:34:09 오후 org.apache.coyote.AbstractProtocol start
+INFO: 프로토콜 핸들러 ["http-nio-8080"]을(를) 시작합니다.
+10월 27, 2023 4:34:09 오후 org.apache.catalina.startup.Catalina start
+INFO: 서버가 [3047] 밀리초 내에 시작되었습니다.

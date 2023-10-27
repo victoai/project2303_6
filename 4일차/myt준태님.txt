@@ -1,0 +1,15 @@
+INFO: Initializing Spring FrameworkServlet 'appServlet'
+INFO : org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization started
+INFO : org.springframework.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Wed Oct 25 11:43:27 KST 2023]; parent: Root WebApplicationContext
+INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/appServlet/servlet-context.xml]
+INFO : org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.acorn.mysqlbatis2.HomeController.home(java.util.Locale,org.springframework.ui.Model)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/t],methods=[GET]}" onto public void com.acorn.mysqlbatis2.T.t()
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/selectalluser2],methods=[GET]}" onto public java.lang.String com.acorn.mysqlbatis2.userController.main(org.springframework.ui.Model) throws java.lang.Exception
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/selectalluser3],methods=[GET]}" onto public java.lang.String com.acorn.mysqlbatis2.userController.selectAll(org.springframework.ui.Model)
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/selectalluser4],methods=[GET]}" onto public java.lang.String com.acorn.mysqlbatis2.userController.selectAll()
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/selectalluser]}" onto public java.lang.String com.acorn.mysqlbatis2.userController.selectall(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model) throws java.lang.Exception
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Wed Oct 25 11:43:27 KST 2023]; parent: Root WebApplicationContext
+INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Wed Oct 25 11:43:27 KST 2023]; parent: Root WebApplicationContext
+INFO : org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+INFO : org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization completed in 4284 ms

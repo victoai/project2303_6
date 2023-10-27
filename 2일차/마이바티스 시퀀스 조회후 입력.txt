@@ -1,0 +1,48 @@
+<insert id="insertS" parameterType="java.util.Map">
+    <!-- 이 부분에서 시퀀스의 다음 값을 가져옵니다. -->
+		    <selectKey keyProperty="id" resultType="java.lang.Long" order="BEFORE">
+		        SELECT testseq.NEXTVAL as id FROM dual
+		    </selectKey>
+		    
+		    <!-- 가져온 시퀀스 값을 사용하여 데이터를 삽입합니다. -->
+		    INSERT INTO tests (id, pw, name)
+		    VALUES (#{id}, #{pw}, #{name})
+</insert>
+
+ 
+	<insert id="insertS" parameterType="java.util.Map">
+    <!-- 이 부분에서 시퀀스의 다음 값을 가져옵니다. -->
+		    <selectKey keyProperty="id" resultType="java.lang.String" order="BEFORE">
+		        SELECT  'test' || testseq.NEXTVAL as id FROM dual
+		    </selectKey>
+		    
+		    <!-- 가져온 시퀀스 값을 사용하여 데이터를 삽입합니다. -->
+		    INSERT INTO tests (id, pw, name)
+		    VALUES (#{id}, #{pw}, #{name})
+	</insert>
+
+
+
+
+	@RequestMapping("/inserts")
+	public void test3s( ) {		
+		 	try {		 		
+		 		
+		 		Map<String, String> item= new HashMap<String, String>();		  
+		 		item.put( "pw", "000");
+		 		item.put( "name" , "홍길");
+		 		 
+		 		dao.inserts(item) ;
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	}
+
+
+  public int inserts(Map<String,String> dto) throws Exception {
+        return session.insert(namespace+"insertS", dto);
+    } // int insert(String statement, Object parameter)
+
+
+
