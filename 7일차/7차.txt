@@ -1,0 +1,35 @@
+
+
+.gitignore 파일
+페이지내 공통모듈 작성하기  (header, footer)
+알고리즘문제시작
+화요일시험  : 학습모듈내에 답이 있음
+
+
+
+현수님   프로젝트  notion
+
+https://www.notion.so/2-2023-10-28-b3bace97d73843e8a161b9578f75a6b4
+
+현수님 티스토리   
+https://khs220507.tistory.com/ 
+
+테이블 설계
+dbdiagramio
+
+
+깃에서 git pull upstream main 한 뒤 스프링에서 실행했을때 발생한 오류
+the selection cannot be launched and there are no recent launches
+참고 사이트 - https://mozi.tistory.com/554
+
+
+
+
+이 오류는 실행모드가 저장이 안되어 있어서 발생하는 오류이며,
+저같은 경우에는 이클립스 실행 시 metadata 충돌로 metadata 폴더를 삭제 후 발생했습니다
+ 
+
+  
+
+
+

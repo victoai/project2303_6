@@ -1,0 +1,97 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+header{
+    width:100%;
+    margin:0px auto;
+    padding:10px;
+    display:flex;
+}
+
+.header_logo{
+    width:280px;
+    height:100px;
+    display: flex;
+    margin-left: 580px;
+    cursor:pointer;
+}
+
+.header_img{
+    width:280px;
+    height:100px;
+    display: block;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../../images/style/cornmarket.png);
+}
+
+.header_name{
+    width:200px;
+    height:90px;
+}
+
+.header_name a{
+    text-decoration: none;
+    color:rgb(241, 196, 15);
+    font-size: 55px;
+    text-align: center;
+    font-family: 'Gaegu', cursive;
+    display: block;
+}
+
+.header_search{
+    display:flex;
+    margin-top: 40px;
+  	width:370px;
+  	height:50px;
+  	margin-left:180px;
+}
+
+header input{
+    width:165px;
+    height:30px;
+    border:1px solid #868b94;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-top: 5px;
+    display:block;
+}
+
+.main_nickname{
+	font-size:15px;
+	font-weight: bold;
+	margin-top:10px;
+	margin-left:20px;
+}
+
+.btn1{
+    width:80px;
+    height:40px;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    line-height: 2.5em;
+    border-radius: 4px;
+    border-color: rgb(241, 196, 15);
+    background-color: rgb(241, 196, 15);
+    margin-left: 10px;
+    cursor:pointer;
+}
+
+.btn2{
+    width:80px;
+    height:40px;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(241, 196, 15);
+    text-align: center;
+    line-height: 2.5em;
+    border-radius: 4px;
+    border-color: rgb(241, 196, 15);
+    background-color: rgb(255, 255, 255);
+    margin-left: 10px;
+    cursor:pointer;
+}

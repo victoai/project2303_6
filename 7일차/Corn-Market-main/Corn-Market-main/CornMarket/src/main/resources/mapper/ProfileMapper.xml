@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.corn.market.ProfileMapper">
+
+	<!-- Profile : user_id, user_pw, user_name, nickname, email, 
+	phone, temperature, profile_img, join_date -->
+	
+	<!-- PostVo : post_id, user_id, category_id, town_code, 
+	title, price, content, created, updated, post_status, post_img -->
+	
+	<!-- 판매내역 조회 -->
+	<select id="selectSale" parameterType="Map" resultType="Sale">
+		SELECT post_id, post_img, title, TRIM(TO_CHAR(price,'99,999,999')) price, town_name 
+		FROM post_tbl22 p 
+		JOIN town_tbl22 t 
+		ON p.town_code = t.town_code 
+		WHERE p.user_id = #{user_id} AND p.post_status = #{post_status} 
+		ORDER BY p.post_id DESC
+	</select>
+	<!-- 거래후기 조회 -->
+	<select id="selectReview" parameterType="String" resultType="Review">
+		SELECT u.user_id, u.profile_img, u.nickname, e.review 
+		FROM end_deal_tbl22 e 
+		JOIN chatting_room_tbl22 c 
+		ON e.room_id = c.room_id 
+		JOIN user_tbl22 u 
+		ON c.buyer_id = u.user_id 
+		WHERE c.seller_id = #{user_id} 
+		ORDER BY e.deal_id DESC
+	</select>
+
+	<!-- 프로필+판매내역 조회 -->
+	<select id="selectProfileSale" parameterType="String" resultType="ProfileSale">
+		SELECT u.user_id, u.nickname, u.temperature, t.town_name, TO_CHAR(u.join_date,'YYYY"년 "MM"월 "DD"일"') join_date, u.profile_img 
+		FROM user_tbl22 u 
+		JOIN address_tbl22 a 
+		ON u.user_id = a.user_id 
+		JOIN town_tbl22 t 
+		ON a.town_code = t.town_code 
+		WHERE u.user_id = #{user_id}  
+	</select>
+	<!-- 프로필+거래후기 조회 -->
+	<select id="selectProfileReview" parameterType="String" resultType="ProfileReview">
+		SELECT u.user_id, u.nickname, u.temperature, t.town_name, TO_CHAR(u.join_date,'YYYY"년 "MM"월 "DD"일"') join_date, u.profile_img 
+		FROM user_tbl22 u 
+		JOIN address_tbl22 a 
+		ON u.user_id = a.user_id 
+		JOIN town_tbl22 t 
+		ON a.town_code = t.town_code 
+		WHERE u.user_id = #{user_id}  
+	</select>
+	
+	<!-- 프로필 수정 조회 -->
+	<select id="selectProfileInfo" parameterType="String" resultType="ProfileUpdate">
+		SELECT nickname, profile_img 
+		FROM user_tbl22 
+		WHERE user_id = #{user_id}  
+	</select>
+	
+	<!-- 닉네임 수정 등록 -->
+	<update id="updateProfileNickname" parameterType="Map">
+		UPDATE user_tbl22 
+		SET nickname = #{nickname}  
+		WHERE user_id = #{user_id} 
+	</update>
+	
+	<!-- 프로필사진 수정 등록 -->
+	<update id="updateProfileImage" parameterType="Map">
+		UPDATE user_tbl22 
+		SET profile_img = #{profile_img}  
+		WHERE user_id = #{user_id} 
+	</update>
+	
+	<!-- 프로필 닉네임 중복 확인, 중복이면 1, 중복아니면 0 -->
+	<select id="checkNickname" parameterType="String" resultType="Integer">
+		SELECT COUNT(nickname)  
+		FROM user_tbl22 
+		WHERE nickname = #{nickname} 
+	</select>
+</mapper>

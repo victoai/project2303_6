@@ -1,0 +1,8 @@
+깃에서 git pull upstream main 한 뒤 스프링에서 실행했을때 발생한 오류
+
+the selection cannot be launched and there are no recent launches
+
+참고 사이트 - https://mozi.tistory.com/554
+
+
+window ->  preferences  - >  run/debug   /  lanuch the associated project

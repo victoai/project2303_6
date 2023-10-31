@@ -1,0 +1,238 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+ul,
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+.profile-section {
+  width: 1200px;
+  margin: 20px auto;
+}
+.profile_wrap {
+  width: 1200px;
+  box-sizing: border-box;
+}
+
+.profile_first {
+  display: flex;
+  padding: 30px 50px;
+}
+
+.profile_img-wrap {
+  display: flex;
+  width: 300px;
+  height: 300px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.profile_img-wrap .prf-img {
+  display: block;
+  width: 200px;
+  height: 200px;
+  box-sizing: border-box;
+  border: 0.3px solid rgba(241, 196, 15, 0.4);
+  border-radius: 50%;
+  background-color: white;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.info-btn {
+  padding: 0 8px;
+  height: 35px;
+  font-size: 14px;
+  border-radius: 2px;
+  border: none;
+  background-color: rgb(241, 196, 15);
+  color: rgb(255, 255, 255);
+  display: block;
+  cursor: pointer;
+}
+.profile_update_btn {
+  position: absolute;
+  bottom: 0px;
+}
+
+.profile_contents {
+  width: 700px;
+  color: rgba(0, 0, 0, 0.7);
+}
+.nickname-wrap {
+  display: flex;
+  align-items: center;
+  border-bottom: 0.3px solid rgba(241, 196, 15, 0.4);
+  padding: 20px 10px;
+  padding-top: 30px;
+}
+.nickname-wrap .profile_nickname {
+  font-size: 30px;
+}
+.nickname-wrap .chatting-btn {
+  margin-left: auto;
+}
+
+.profile-info-wrap {
+  padding: 20px 10px;
+}
+.profile-info-wrap .profile-info {
+  font-size: 15px;
+}
+.flexf {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.7);
+}
+.flexf-items {
+  margin-right: 15px;
+}
+.icon-items {
+  width: 25px;
+  height: 25px;
+  margin-right: 2px;
+  filter: invert(27%) sepia(3%) saturate(17%) hue-rotate(14deg) brightness(95%) contrast(86%);
+}
+
+.manner_degree .degree {
+  font-size: 16px;
+  font-weight: 900;
+  color: rgb(55, 186, 238);
+}
+
+.profile_second {
+  color: rgba(0, 0, 0, 0.7);
+  padding: 30px 50px;
+  padding-top: 0;
+  /* border-top: 0.3px solid rgba(241, 196, 15, 0.4); */
+}
+
+.profile_second .profile_nav {
+  width: 1000px;
+  display: flex;
+  /* padding: 0 50px; */
+  margin: 10px auto;
+  margin-top: 0;
+  padding-top: 40px;
+  border-top: 0.3px solid rgba(241, 196, 15, 0.4);
+}
+
+.profile_status {
+  width: 320px;
+  height: 60px;
+  border-radius: 2px;
+  line-height: 60px;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.profile_status a {
+  font-size: 17px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.profile_status a:hover {
+  color: #868b94;
+}
+
+.card-wrap {
+  padding: 30px 50px;
+  margin: 0 auto;
+}
+
+.home-card-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.home-card-wrap .card-top {
+  width: 220px;
+  margin: 30px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+.home-card-wrap .card-top .card-photo {
+  background-color: white;
+  width: 212px;
+  height: 212px;
+  overflow: hidden;
+  border-radius: 5px;
+  border: 0.3px solid rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  display: block;
+  margin: 0 auto;
+}
+.home-card-wrap .card-top .card-desc {
+  padding: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.card-title {
+  margin-bottom: 2px;
+}
+.card-price {
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+.card-region {
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+
+.profile_review_wrap {
+  padding: 30px 60px;
+  border-collapse: collapse;
+}
+
+.review_part {
+  display: flex;
+  border-top: 0.3px solid rgba(241, 196, 15, 0.4);
+  border-bottom: 0.3px solid rgba(241, 196, 15, 0.4);
+  padding: 15px 20px;
+  margin: 0 auto;
+  margin-top: -1px;
+}
+
+.review_nickname {
+  width: 130px;
+  height: 50px;
+  background-color: rgba(241, 196, 15, 0.4);
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 50px;
+  text-align: center;
+  border-radius: 2px;
+}
+
+.real_review {
+  color: rgba(0, 0, 0, 0.7);
+  padding: 5px;
+  margin-left: 15px;
+  line-height: 40px;
+}
+
+.home-card-wrap .card-top .card-desc .card-counts {
+  color: #868e96;
+  font-size: 13px;
+}
+.home-main-card-wrap .card-more {
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  letter-spacing: -0.3px;
+  font-weight: bold;
+  color: #212529;
+  text-align: center;
+}

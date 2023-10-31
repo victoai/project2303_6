@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.corn.market.MemberMapper">
+
+	<!-- 아이디 중복검사 -->
+	<select id="idCheck" parameterType="String" resultType="int">
+		SELECT COUNT(user_id) FROM user_tbl22 WHERE user_id = #{user_id}
+	</select>
+
+	<!-- 닉네임 중복검사 -->
+	<select id="nicknameCheck" parameterType="String" resultType="int">
+		SELECT COUNT(nickname) FROM user_tbl22 WHERE nickname = #{nickname}
+	</select>
+	
+	<!-- 회원가입 -->
+	<insert id="memberSignup" parameterType="Member">
+  	<![CDATA[
+  		INSERT into user_tbl22
+  		VALUES(#{user_id}, #{user_pw}, #{user_name}, #{nickname}, #{email}, #{phone}, DEFAULT, DEFAULT, DEFAULT)
+	]]>
+	</insert>
+
+	<!-- 로그인 -->
+	<select id="memberLogin" parameterType="Member" resultType="Member">
+		SELECT user_id, user_pw
+		FROM USER_TBL22
+		WHERE user_id = #{user_id} AND user_pw = #{user_pw}
+	</select>
+	<!-- 로그인시 아이디 비밀번호 확인 -->
+	<select id="checkLogin" parameterType="Member" resultType="Int">
+		SELECT COUNT(*)
+		FROM user_tbl22
+		WHERE user_id = #{user_id} AND user_pw = #{user_pw}
+	</select>
+
+	<!--카카오로그인 -->
+	<insert id="kakaoSignup" parameterType="Member">
+  	<![CDATA[
+  	INSERT INTO user_tbl22
+  	VALUES(#{user_id}, '1234', #{user_name}, #{nickname}, #{email},'010-0000-0000', DEFAULT, DEFAULT, DEFAULT)
+	]]>
+	</insert>
+
+</mapper>
+

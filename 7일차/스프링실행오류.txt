@@ -1,0 +1,9 @@
+깃에서 git pull upstream main 한 뒤 스프링에서 실행했을때 발생한 오류
+the selection cannot be launched and there are no recent launches
+참고 사이트 - https://mozi.tistory.com/554
+
+
+
+
+이 오류는 실행모드가 저장이 안되어 있어서 발생하는 오류이며,
+저같은 경우에는 이클립스 실행 시 metadata 충돌로 metadata 폴더를 삭제 후 발생했습니다

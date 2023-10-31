@@ -1,0 +1,28 @@
+/*
+	function currentPage(pagenum){
+		$.ajax({
+	 		type:"GET" ,
+	 		url: "/searchapi/currentpage" ,
+	 		data: "pagenum=" + pagenum,
+	 		success : function( data){
+	 			alert("성공");
+	 			//$(".page_grp").empty();
+	 			
+	 			let str = "<c:if test=\"${handler2.currentGrp > 1}\"> "
+	 					+ "		<div class=\"page_num\"><<</div> "
+	 					+ "</c:if>"
+	 					+ "<c:forEach var=\"item\" begin=\"${handler2.grpStartPage}\" end=\"${handler2.grpEndPage}\">"
+           				+ "		<div class=\"page_num\" id=\"${item}\" onclick=\"currentPage(${item})\">${item}</div>"
+            			+ "</c:forEach>"
+           				+ "<c:if test=\"${handler2.currentGrp != handler2.lastGrp}\">"
+            			+ "<div class=\"page_num\">>></div>"
+           				+ "</c:if>";
+           		
+	 		},
+	 		error: function(){
+	 			alert( "error");
+	 		}
+	 	});	
+		
+	}
+	*/

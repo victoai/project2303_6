@@ -1,0 +1,4 @@
+
+alter table  'emp'  drop  foreign key  'fk_emp_dept';
+drop table dept ;
+

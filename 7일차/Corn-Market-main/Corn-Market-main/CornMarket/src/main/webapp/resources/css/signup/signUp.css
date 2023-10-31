@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+section{
+    width: 1200px;
+    margin: 0 auto;
+}
+.join_wrap{
+    width:600px;
+    text-align: center;
+    margin:0 auto;
+    padding:10px;
+    margin-bottom: 70px;
+}
+
+h2{
+    text-align: center;
+    display:block;
+    line-height: 70px;
+    font-weight: 400;
+    color: #757576;
+
+}
+
+.h2_st{
+    width:150px;
+    height:70px;
+    margin:50px auto;
+}
+
+.join_rule1{
+    margin:0 auto;
+    width:1200px;
+    color:#868b94;
+    font-size: 12px;
+}
+
+.join_rule1 input{
+    margin-bottom: 30px;
+}
+.checkbox_wrap{
+	width: 900px;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+
+.rule1{
+    border:1px solid rgb(241, 196, 15);
+    border-radius: 2px;
+    width:900px;
+    padding:5px;
+    margin: 0 auto;
+    display: block;
+}
+.rule1-1{
+	width: 900px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+.join_rule2{
+    color:#868b94;
+    width: 330px;
+    height:30px;
+    margin:30px auto;
+    font-size: 14px;
+}
+
+.rule2-2{
+	margin-left:40px;
+}
+
+.join_first{
+    display:flex;
+    height:70px;
+    padding:8px;
+    border-bottom:1px solid rgb(241, 196, 15);
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
+
+.non_hidden{
+	display:flex;
+	width:550px;
+	height:40px;
+}
+
+.non_hidden1{
+	display:flex;
+	width:430px;
+	height:40px;
+}
+
+.join_first_email{
+    height:100px;
+    padding:8px;
+    border-bottom:1px solid rgb(241, 196, 15);
+    border-radius: 2px;
+    margin-bottom: 10px;
+}
+
+.join_email_second{
+    display: flex;
+}
+
+.join_main{
+    font-size: 15px;
+    color:#757576;
+    width:150px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.join_input_email{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 2px;
+    width:150px;
+    height:30px;
+}
+
+.join_email_sel{
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-top: 2px;  
+    width:160px;
+    height:35px;
+}
+
+.join_input{
+    margin-left: 10px;
+    margin-top: 2px;
+    margin-right: 10px;
+    width:250px;
+    height:35px;
+}
+
+.join_input_phone1{
+    width:100px;
+    height:30px;
+    margin-top: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.join_input_phone2{
+    width:100px;
+    height:30px;
+    margin-top: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.join_input_phone3{
+    width:100px;
+    height:30px;
+    margin-top: 2px;
+    margin-left: 10px;
+}
+
+.join_email_first{
+    display: flex;
+}
+
+.email_num{
+    width:120px;
+    height:30px;
+    margin-left: 160px;
+    margin-right: 10px;
+    margin-top: 2px;
+}
+
+.join_phone{
+    margin-top: 7px;
+}
+
+.join_check_again{
+    width:100px;
+    height:40px;
+    margin-left: 10px;
+    margin-top: 1px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(241, 196, 15);
+    color: rgb(255, 255, 255);
+    display: block;
+    cursor: pointer;
+}
+
+.join_num{
+    width:100px;
+    height:40px;
+    margin-left: 10px;
+    margin-top: 1px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(241, 196, 15);
+    color: rgb(255, 255, 255);
+    display: block;
+}
+
+.join_second{
+    width:300px;
+    height:45px;
+    display: flex;
+    margin:0px auto;
+    margin-top: 50px;
+}
+
+.join_wrap button{
+    width:100px;
+    height:40px;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    line-height: 2.5em;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(241, 196, 15);
+    display:block;
+    cursor:pointer;
+    margin-right: 50px;
+}
+
+.pw_error{
+	font-size:13px;
+	margin-top:10px;
+}
+
+/* 중복아이디 존재하지 않는경우 */
+.id_input_re_1{
+	color : green;
+	display : none;
+}
+/* 중복아이디 존재하는 경우 */
+.id_input_re_2{
+	color : red;
+	display : none;
+	}

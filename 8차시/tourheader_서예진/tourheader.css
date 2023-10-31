@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+header {
+    width: 100%;
+    height: 90px;
+    /* border: 1px solid black; */
+    /* background-color: beige; */
+    transition: 1s;
+    overflow: hidden;
+    position: relative;
+    position: fixed;
+    z-index: 999;
+}
+
+header:hover {
+    height: 290px;
+    
+}
+
+.headerBox {
+    height: 90px;
+    display: flex;
+    margin: 0 25.5% 0 18%;
+    z-index: 999;
+}
+
+.contentBox {
+    height: 200px;
+    background-color: #f5f5f5;
+}
+
+.menu {
+    display: flex;
+}
+
+.munuwrap {
+    flex: 4;
+    /* border: 1px solid red; */
+    margin: 0 25.5% 0 18%;
+    position: absolute;
+    left: 110px;
+}
+
+
+.menu>li {
+    flex: 1;
+    text-align: center;
+    line-height: 75px;
+    list-style: none;
+
+}
+
+.menuContent>li {
+    list-style: none;
+}
+
+/* 로고 */
+.logo {
+    /* border: 1px solid black; */
+    flex: 1;
+}
+
+.mainlogo {
+    position: absolute;
+    top: 28px;
+    left: 60px;
+}
+
+.mainicon {
+    display: inline-block;
+    width: 207px;
+    height: 36px;
+}
+
+.mainicon svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* 메뉴 */
+
+
+
+.munuwrap>li {
+    /* justify-content: center; */
+    width: auto;
+    margin: 0 2.5%;
+    height: 90px;
+    line-height: 90px;
+}
+
+.headerBox a {
+    display: block;
+    font-size: 20px;
+    letter-spacing: -1px;
+    color: #333;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+
+.munuwrap li {
+    width: 150px;
+    margin: 0 2.5%;
+    height: 90px;
+    line-height: 90px;
+}
+
+.menuContent a {
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.menuContent li {
+    height: auto;
+    line-height: 40px;
+    padding: 0 0 8px 0;
+}
+
+/* 검색 */
+
+.searchBox {
+    width: 400px;
+    height: 40px;
+    /* border: 1px solid blue; */
+    position: absolute;
+    top: 20px;
+    right: 60px;
+    display: flex;
+    /* border-bottom: 1px solid #333; */
+}
+
+.searchWrap {
+    width: 315px;
+    position: relative;
+    height: 42px;
+    padding-right: 10px;
+    box-sizing: border-box;
+
+}
+
+.searchWrap input {
+    width: 300px;
+    height: 40px;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: 0;
+    padding: 0 0 0 10px;
+    font-weight: 400;
+    color: #333;
+    background: none;
+    border-bottom: 1px solid #333;
+}
+
+.searchBtn {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    text-indent: -9999px;
+    width: 24px;
+    height: 24px;
+    background: url(https://korean.visitkorea.or.kr/resources/images/common/btn_header_search.png) no-repeat;
+}
+
+.profile {
+    padding: 10px 0 0 29px;
+    position: relative;
+}
+
+.profile a {
+    display: inline-block;
+    width: 31px;
+    height: 31px;
+    background-image: url(https://korean.visitkorea.or.kr/resources/images/common/icon_header_profile1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50% !important;
+    border-radius: 100%;
+    text-indent: -9999px;
+    position: absolute;
+    left: 15px;
+    top: 8px;
+
+}

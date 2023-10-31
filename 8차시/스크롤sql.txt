@@ -1,0 +1,69 @@
+drop table shoptbl;
+create table shoptbl(
+  content varchar2(500),
+  likenum number(20),
+  image1 varchar2(500)
+);
+
+insert into shoptbl values('아이폰11 s급팝니다.',3, 'https://newsimg.sedaily.com/2022/10/10/26CAO29VHB_1.jpg');
+insert into shoptbl values('가구 나눔합니다',15, 'https://m.moagagu.com/web/product/big/202210/f85e9344796ec09fd75faa85ac1e3a61.jpg');
+insert into shoptbl values('아기 욕조 나눔합니다.',4, 'https://m.dressybag.com/web/product/big/202209/736e460b85256de8836fbcf30374f457.jpg');
+insert into shoptbl values('노트북 싸게 올립니다.',1, 'https://newsimg.sedaily.com/2022/10/10/26CAO29VHB_1.jpg');
+insert into shoptbl values('갤럭시 s급팝니다.',2, 'https://m.moagagu.com/web/product/big/202210/f85e9344796ec09fd75faa85ac1e3a61.jpg');
+insert into shoptbl values('프라모델 나눔합니다.',5, 'https://m.dressybag.com/web/product/big/202209/736e460b85256de8836fbcf30374f457.jpg');
+insert into shoptbl values('책 무료나눔 합니다.',6, 'https://newsimg.sedaily.com/2022/10/10/26CAO29VHB_1.jpg');
+insert into shoptbl values('아이폰11 s급팝니다.',3, 'https://newsimg.sedaily.com/2022/10/10/26CAO29VHB_1.jpg');
+insert into shoptbl values('가구 나눔합니다',15, 'https://m.moagagu.com/web/product/big/202210/f85e9344796ec09fd75faa85ac1e3a61.jpg');
+insert into shoptbl values('아기 욕조 나눔합니다.',4, 'https://m.dressybag.com/web/product/big/202209/736e460b85256de8836fbcf30374f457.jpg');
+insert into shoptbl values('노트북 싸게 올립니다.',1, 'https://newsimg.sedaily.com/2022/10/10/26CAO29VHB_1.jpg');
+insert into shoptbl values('갤럭시 s급팝니다.',2, 'https://m.moagagu.com/web/product/big/202210/f85e9344796ec09fd75faa85ac1e3a61.jpg');
+insert into shoptbl values('프라모델 나눔합니다.',5, 'https://m.dressybag.com/web/product/big/202209/736e460b85256de8836fbcf30374f457.jpg');
+insert into shoptbl values('책 무료나눔 합니다.',6, 'https://newsimg.sedaily.com/2022/10/10/26CAO29VHB_1.jpg');
+insert into shoptbl values('아이폰11 s급팝니다.',3, 'https://newsimg.sedaily.com/2022/10/10/26CAO29VHB_1.jpg');
+insert into shoptbl values('가구 나눔합니다',15, 'https://m.moagagu.com/web/product/big/202210/f85e9344796ec09fd75faa85ac1e3a61.jpg');
+insert into shoptbl values('아기 욕조 나눔합니다.',4, 'https://m.dressybag.com/web/product/big/202209/736e460b85256de8836fbcf30374f457.jpg');
+insert into shoptbl values('노트북 싸게 올립니다.',1, 'https://newsimg.sedaily.com/2022/10/10/26CAO29VHB_1.jpg');
+insert into shoptbl values('갤럭시 s급팝니다.',2, 'https://m.moagagu.com/web/product/big/202210/f85e9344796ec09fd75faa85ac1e3a61.jpg');
+insert into shoptbl values('프라모델 나눔합니다.',5, 'https://m.dressybag.com/web/product/big/202209/736e460b85256de8836fbcf30374f457.jpg');
+insert into shoptbl values('책 무료나눔 합니다.',6, 'https://newsimg.sedaily.com/2022/10/10/26CAO29VHB_1.jpg');
+insert into shoptbl values('아이폰11 s급팝니다.',3, 'https://newsimg.sedaily.com/2022/10/10/26CAO29VHB_1.jpg');
+insert into shoptbl values('가구 나눔합니다',15, 'https://m.moagagu.com/web/product/big/202210/f85e9344796ec09fd75faa85ac1e3a61.jpg');
+insert into shoptbl values('아기 욕조 나눔합니다.',4, 'https://m.dressybag.com/web/product/big/202209/736e460b85256de8836fbcf30374f457.jpg');
+insert into shoptbl values('노트북 싸게 올립니다.',1, 'https://newsimg.sedaily.com/2022/10/10/26CAO29VHB_1.jpg');
+insert into shoptbl values('갤럭시 s급팝니다.',2, 'https://m.moagagu.com/web/product/big/202210/f85e9344796ec09fd75faa85ac1e3a61.jpg');
+insert into shoptbl values('프라모델 나눔합니다.',5, 'https://m.dressybag.com/web/product/big/202209/736e460b85256de8836fbcf30374f457.jpg');
+insert into shoptbl values('책 무료나눔 합니다.',6, 'https://newsimg.sedaily.com/2022/10/10/26CAO29VHB_1.jpg');
+
+insert into shoptbl values('아이폰11 s급팝니다.',3, 'https://newsimg.sedaily.com/2022/10/10/26CAO29VHB_1.jpg');
+insert into shoptbl values('가구 나눔합니다',15, 'https://m.moagagu.com/web/product/big/202210/f85e9344796ec09fd75faa85ac1e3a61.jpg');
+insert into shoptbl values('아기 욕조 나눔합니다.',4, 'https://m.dressybag.com/web/product/big/202209/736e460b85256de8836fbcf30374f457.jpg');
+insert into shoptbl values('노트북 싸게 올립니다.',1, 'https://newsimg.sedaily.com/2022/10/10/26CAO29VHB_1.jpg');
+insert into shoptbl values('갤럭시 s급팝니다.',2, 'https://m.moagagu.com/web/product/big/202210/f85e9344796ec09fd75faa85ac1e3a61.jpg');
+insert into shoptbl values('프라모델 나눔합니다.',5, 'https://m.dressybag.com/web/product/big/202209/736e460b85256de8836fbcf30374f457.jpg');
+insert into shoptbl values('책 무료나눔 합니다.',6, 'https://newsimg.sedaily.com/2022/10/10/26CAO29VHB_1.jpg');
+insert into shoptbl values('아이폰11 s급팝니다.',3, 'https://newsimg.sedaily.com/2022/10/10/26CAO29VHB_1.jpg');
+insert into shoptbl values('가구 나눔합니다',15, 'https://m.moagagu.com/web/product/big/202210/f85e9344796ec09fd75faa85ac1e3a61.jpg');
+insert into shoptbl values('아기 욕조 나눔합니다.',4, 'https://m.dressybag.com/web/product/big/202209/736e460b85256de8836fbcf30374f457.jpg');
+insert into shoptbl values('노트북 싸게 올립니다.',1, 'https://newsimg.sedaily.com/2022/10/10/26CAO29VHB_1.jpg');
+insert into shoptbl values('갤럭시 s급팝니다.',2, 'https://m.moagagu.com/web/product/big/202210/f85e9344796ec09fd75faa85ac1e3a61.jpg');
+insert into shoptbl values('프라모델 나눔합니다.',5, 'https://m.dressybag.com/web/product/big/202209/736e460b85256de8836fbcf30374f457.jpg');
+insert into shoptbl values('책 무료나눔 합니다.',6, 'https://newsimg.sedaily.com/2022/10/10/26CAO29VHB_1.jpg');
+insert into shoptbl values('아이폰11 s급팝니다.',3, 'https://newsimg.sedaily.com/2022/10/10/26CAO29VHB_1.jpg');
+insert into shoptbl values('가구 나눔합니다',15, 'https://m.moagagu.com/web/product/big/202210/f85e9344796ec09fd75faa85ac1e3a61.jpg');
+insert into shoptbl values('아기 욕조 나눔합니다.',4, 'https://m.dressybag.com/web/product/big/202209/736e460b85256de8836fbcf30374f457.jpg');
+insert into shoptbl values('노트북 싸게 올립니다.',1, 'https://newsimg.sedaily.com/2022/10/10/26CAO29VHB_1.jpg');
+insert into shoptbl values('갤럭시 s급팝니다.',2, 'https://m.moagagu.com/web/product/big/202210/f85e9344796ec09fd75faa85ac1e3a61.jpg');
+insert into shoptbl values('프라모델 나눔합니다.',5, 'https://m.dressybag.com/web/product/big/202209/736e460b85256de8836fbcf30374f457.jpg');
+insert into shoptbl values('책 무료나눔 합니다.',6, 'https://newsimg.sedaily.com/2022/10/10/26CAO29VHB_1.jpg');
+insert into shoptbl values('아이폰11 s급팝니다.',3, 'https://newsimg.sedaily.com/2022/10/10/26CAO29VHB_1.jpg');
+insert into shoptbl values('가구 나눔합니다',15, 'https://m.moagagu.com/web/product/big/202210/f85e9344796ec09fd75faa85ac1e3a61.jpg');
+insert into shoptbl values('아기 욕조 나눔합니다.',4, 'https://m.dressybag.com/web/product/big/202209/736e460b85256de8836fbcf30374f457.jpg');
+insert into shoptbl values('노트북 싸게 올립니다.',1, 'https://newsimg.sedaily.com/2022/10/10/26CAO29VHB_1.jpg');
+insert into shoptbl values('갤럭시 s급팝니다.',2, 'https://m.moagagu.com/web/product/big/202210/f85e9344796ec09fd75faa85ac1e3a61.jpg');
+insert into shoptbl values('프라모델 나눔합니다.',5, 'https://m.dressybag.com/web/product/big/202209/736e460b85256de8836fbcf30374f457.jpg');
+insert into shoptbl values('책 무료나눔 합니다.',6, 'https://newsimg.sedaily.com/2022/10/10/26CAO29VHB_1.jpg');
+insert into shoptbl values('아기 욕조 나눔합니다.',4, 'https://m.dressybag.com/web/product/big/202209/736e460b85256de8836fbcf30374f457.jpg');
+insert into shoptbl values('노트북 싸게 올립니다.',1, 'https://newsimg.sedaily.com/2022/10/10/26CAO29VHB_1.jpg');
+insert into shoptbl values('갤럭시 s급팝니다.',2, 'https://m.moagagu.com/web/product/big/202210/f85e9344796ec09fd75faa85ac1e3a61.jpg');
+commit;
+select * from shoptbl;

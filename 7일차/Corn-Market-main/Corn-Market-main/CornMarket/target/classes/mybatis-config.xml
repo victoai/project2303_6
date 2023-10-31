@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+		PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+ <settings>
+  <setting name="jdbcTypeForNull" value="NULL"/>
+ </settings>
+
+
+	<typeAliases>
+		<typeAlias alias="Member" type="com.corn.market.member.domain.Member"/>
+		<typeAlias alias="LoginMember" type="com.corn.market.member.domain.LoginMember"/>
+		
+		<typeAlias alias="Post" type="com.corn.market.post.domain.PostVO"/>
+		<typeAlias alias="PostList" type="com.corn.market.post.domain.PostList"/>
+		<typeAlias alias="Criteria" type="com.corn.market.post.domain.Criteria"/>
+		
+		<!-- 프로필 -->
+		<typeAlias alias="Sale" type="com.corn.market.profile.domain.Sale"/>
+		<typeAlias alias="Review" type="com.corn.market.profile.domain.Review"/>
+		<typeAlias alias="ProfileSale" type="com.corn.market.profile.domain.ProfileSale"/>
+		<typeAlias alias="ProfileReview" type="com.corn.market.profile.domain.ProfileReview"/>
+		<typeAlias alias="ProfileUpdate" type="com.corn.market.profile.domain.ProfileUpdate"/>
+	</typeAliases>
+
+
+
+</configuration>

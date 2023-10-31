@@ -1,0 +1,206 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+}
+
+.header-wrap{
+    width: 1200px;
+    height: 200px;
+    display: flex;
+    margin: 0 auto;
+    border-bottom: 2px solid rgb(241,196,15);
+    position: relative;
+    margin-bottom: 50px;
+}
+/** 네비게이션라인*/
+.nav-menu{
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 999;
+    top: 10px;
+    left: 10px;
+    filter: invert(75%) sepia(54%) saturate(2306%) hue-rotate(2deg) brightness(110%) contrast(89%);
+}
+.header-wrap a{
+    text-decoration: none;
+}
+.header-wrap li{
+    list-style: none;
+}
+.nav-menu.active{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    filter: invert(75%) sepia(54%) saturate(2306%) hue-rotate(2deg) brightness(110%) contrast(89%);
+}
+.nav-sidemenu {
+    position: absolute;
+    left: 55px;
+    top: 20px;
+    width: 200px;
+   	font-size: 13px;
+    display: none;
+    background-color: rgb(249, 229, 150);
+}
+.nav-wrap li a {
+    display: block;
+    color: #202020;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+.nav-wrap li a:hover:not(.active) {
+    background-color: rgb(241,196,15);
+    color: #ffffff;
+}
+.nav-sidemenu.active{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/** 로고라인*/
+.header-img-wrap{
+    margin-left: 50px;
+    margin-top : 30px;
+}
+.header-img-wrap img{
+	cursor: pointer;
+}
+/** 검색창*/
+.header-search-wrap{
+    display: flex;
+    width: 400px;
+    height: 40px;
+    margin-left: 70px;
+    margin-top: 75px;
+    border: 2px solid rgb(241,196,15);
+    border-radius: 2px;
+}
+.header-search-wrap input{
+    width: 350px;
+    height: 40px;
+    border: none;
+    padding: 3px;
+    color: #757576;
+    font-size: 15px;
+}
+.header-search-wrap img{
+	cursor: pointer;
+    margin-left: 10px;
+    filter: invert(51%) sepia(1%) saturate(374%) hue-rotate(202deg) brightness(88%) contrast(85%);
+}
+/** 아이콘 라인*/
+.header-icon-wrap{
+    position: absolute;
+    right: 10px;
+    width: 400px;
+    height: 150px;
+}
+.loginsignup-wrap{
+    display: flex;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    width: 100px;
+    height: 20px;
+}
+.loginsignup-wrap p{
+    color: #757576;
+    font-size: 11px;
+}
+.loginsignup-wrap .loginsignup-text{
+    margin: 5px;
+    font-size: 11px;
+    color: #757576;
+    line-height: 10px;
+}
+.header-signup{
+    cursor: pointer;
+    color: #757576;
+}
+.header-login{
+    cursor: pointer;
+    color: #757576;
+}
+.header-logout{
+	position: absolute;
+	top: 5px;
+	right: 0px;
+    cursor: pointer;
+    color: #757576;
+}
+.sellprochat-wrap{
+    display: flex;
+    position: absolute;
+    float: right;
+    right: 0px;
+    top: 80px;
+    width: 350px;
+    height: 30px; 
+    font-size: 20px;
+}
+.sellprochat-wrap img{
+    filter: invert(75%) sepia(54%) saturate(2306%) hue-rotate(2deg) brightness(110%) contrast(89%);
+}
+
+.sellprochat-wrap .sellprochat-text{
+    margin: 10px;
+    font-size: 20px;
+    line-height: 10px;
+    color: #757576;
+}
+.sellprochat-wrap p{
+    color: #757576;
+}
+.sellprochat-wrap a{
+    text-decoration: none;
+    color: #757576;
+    font-size: 16px;
+}
+.header-selling{
+    display: flex;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 15px;
+}
+.header-selling-text{
+    height: 30px;
+    color: #757576;
+    line-height: 30px;
+    margin-left: 5px;
+}
+.header-profile{
+    display: flex;
+    width: 90px;
+    height: 30px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 15px;
+}
+.header-profile-text{
+    height: 30px;
+    line-height: 30px;
+    margin-left: 5px;
+}
+.header-chatting{
+    display: flex;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 15px;
+}
+.header-chatting-text{
+    height: 30px;
+    line-height: 30px;
+    margin-left: 5px;
+}

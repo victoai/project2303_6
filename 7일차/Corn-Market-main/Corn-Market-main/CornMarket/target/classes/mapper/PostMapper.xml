@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.corn.market.PostMapper">
+	
+	<!-- post_id, user_id, category_id, town_code, title, price, content, created, updated, post_status, post_img   -->
+	
+	<!-- 판매글 전체 조회 - 최신글 (기본) -->
+	<select id="selectAll" resultType="PostList">
+		SELECT post_id, p.user_id, u.nickname, category_id, t.town_name, title, price, post_img  
+		FROM post_tbl22 p 
+		JOIN town_tbl22 t 
+		ON p.town_code = t.town_code 
+		JOIN user_tbl22 u
+		ON p.user_id = u.user_id  
+		WHERE post_status = '판매중' 
+		ORDER BY created DESC
+	</select>
+	<!-- 판매글 카테고리별 조회 -->
+	<select id="selectCategory" resultType="PostList" parameterType="String">
+		SELECT post_id, p.user_id, u.nickname, category_id, t.town_name, title, price, post_img  
+		FROM post_tbl22 p 
+		JOIN town_tbl22 t 
+		ON p.town_code = t.town_code 
+		JOIN user_tbl22 u
+		ON p.user_id = u.user_id  
+		WHERE category_id = #{category_id} AND post_status = '판매중' 
+		ORDER BY created DESC
+	</select>
+	<!-- 판매글 지역별 조회 -->
+	<select id="selectTown" resultType="PostList" parameterType="String">
+		SELECT post_id, p.user_id, u.nickname, category_id, t.town_name, title, price, post_img   
+		FROM post_tbl22 p 
+		JOIN town_tbl22 t 
+		ON p.town_code = t.town_code 
+		JOIN user_tbl22 u
+		ON p.user_id = u.user_id  
+		WHERE t.town_code = #{town_code} AND post_status = '판매중' 
+		ORDER BY created DESC
+	</select>
+	
+	<!-- 판매글 상세 조회 -->
+	<select id="selectOne" resultType="PostList" parameterType="String">
+		SELECT post_id, p.user_id, u.nickname, p.category_id, c.category_name, t.town_name, title, price, content, post_img 
+		FROM post_tbl22 p 
+		JOIN town_tbl22 t  
+		ON p.town_code = t.town_code  
+		JOIN user_tbl22 u 
+		ON p.user_id = u.user_id 
+		JOIN category_tbl22 c 
+		ON p.category_id= c.category_id 
+		WHERE post_id = #{post_id} 
+	</select>
+	
+	<!-- 판매글 등록 -->
+	<insert id="enroll" parameterType="Post">
+		INSERT INTO post_tbl22
+		VALUES(post_sq.NEXTVAL,#{user_id},#{category_id},
+		  (SELECT town_code FROM address_tbl22 WHERE user_id = #{user_id}
+		  AND addr_id = (SELECT MAX(addr_id) FROM address_tbl22 WHERE user_id = #{user_id}))
+		,#{title},#{price},#{content},DEFAULT,NULL,DEFAULT,#{post_img})
+	</insert>
+
+	<!-- 판매글 수정 -->
+	<update id="modify" parameterType="Post">
+		UPDATE post_tbl22 
+		SET category_id = #{category_id}, title = #{title}, price = #{price}, content = #{content}, updated = DEFAULT, post_img = #{post_img} 
+		WHERE post_id = #{post_id}
+	</update>
+
+	<!-- 판매글 삭제 -->
+	<update id="delete" parameterType="String">
+		UPDATE post_tbl22 
+		SET post_status = '삭제' 
+		WHERE post_id = #{post_id}
+	</update>
+	
+	<!-- 게시물 목록(페이징) -->
+	<select id="getListPaging" parameterType="Criteria" resultType="PostList">
+    <![CDATA[ 
+		SELECT rn, post_id,user_id,nickname, category_id, town_name, title, price, post_img FROM
+		(
+			SELECT /*+INDEX_DESC(post_tbl22 pk_board) */ ROW_NUMBER() OVER (ORDER BY created DESC) AS rn, p.post_id, p.user_id, u.nickname, p.category_id, t.town_name, p.title, p.price, p.post_img 
+			FROM post_tbl22 p 
+			LEFT OUTER JOIN town_tbl22 t ON p.town_code = t.town_code
+			LEFT OUTER JOIN user_tbl22 u ON p.user_id = u.user_id   
+			WHERE post_status = '판매중'
+	    )
+		WHERE rn BETWEEN (#{pageNum} - 1) * #{amount} + 1 AND #{pageNum} * #{amount}
+    ]]>
+    </select>
+
+	<!-- 게시물 카테고리별 목록(페이징) -->
+	<select id="selectCategoryList" parameterType="Map" resultType="PostList">
+    <![CDATA[ 
+		SELECT rn, post_id, user_id, nickname, category_id, category_name, town_name, title, price, post_img FROM
+		(
+			SELECT /*+INDEX_DESC(post_tbl22 pk_board) */ ROW_NUMBER() OVER (ORDER BY created DESC) AS rn, 
+				p.post_id, p.user_id, u.nickname, p.category_id, c.category_name, t.town_name, p.title, p.price, p.post_img 
+			FROM post_tbl22 p 
+			LEFT OUTER JOIN town_tbl22 t ON p.town_code = t.town_code 
+			LEFT OUTER JOIN user_tbl22 u ON p.user_id = u.user_id 
+			LEFT OUTER JOIN category_tbl22 c ON p.category_id= c.category_id 
+			WHERE p.category_id = #{category_id} AND post_status = '판매중' 
+		)
+		WHERE rn BETWEEN (#{pageNum} - 1) * #{amount} + 1 AND #{pageNum} * #{amount}
+    ]]>
+	</select>
+
+	<!-- 게시물 총 개수 -->
+	<select id="getTotal" resultType="int">
+		SELECT count(*) FROM post_tbl22 WHERE post_status = '판매중'
+	</select>
+	<!-- 카테고리별 게시물 총 개수 -->
+	<select id="getCategoryTotal" parameterType="String" resultType="int">
+		SELECT count(*) FROM post_tbl22 WHERE post_status = '판매중' AND category_id = #{category_id}
+	</select>
+
+	<!-- 판매글 검색 (페이징) -->
+	<select id="selectSearchResult" parameterType="Map" resultType="PostList">
+	<![CDATA[
+		SELECT rn, post_id, user_id, nickname, category_id, category_name, town_name, title, price, post_img FROM
+		(
+			SELECT /*+INDEX_DESC(post_tbl22 pk_board) */ ROW_NUMBER() OVER (ORDER BY created DESC) AS rn, 
+				p.post_id, p.user_id, u.nickname, p.category_id, c.category_name, t.town_name, p.title, p.price, p.post_img 
+			FROM post_tbl22 p 
+			LEFT OUTER JOIN town_tbl22 t ON p.town_code = t.town_code 
+			LEFT OUTER JOIN user_tbl22 u ON p.user_id = u.user_id 
+			LEFT OUTER JOIN category_tbl22 c ON p.category_id= c.category_id 
+			WHERE post_status = '판매중' AND (category_name LIKE '%'||#{keyword}||'%' OR town_name LIKE '%'||#{keyword}||'%' OR title LIKE '%'||#{keyword}||'%' OR content LIKE '%'||#{keyword}||'%')
+		)
+		WHERE rn BETWEEN (#{pageNum} - 1) * #{amount} + 1 AND #{pageNum} * #{amount}
+	]]>
+	</select>
+	
+	<!-- 판매글 검색 총 개수 -->
+	<select id="getSearchTotal" parameterType="String" resultType="int">
+		SELECT count(*) 
+		FROM post_tbl22 p 
+		JOIN town_tbl22 t  
+		ON p.town_code = t.town_code  
+		JOIN user_tbl22 u 
+		ON p.user_id = u.user_id 
+		JOIN category_tbl22 c 
+		ON p.category_id= c.category_id 
+		WHERE post_status = '판매중' AND (category_name LIKE '%'||#{keyword}||'%' OR town_name LIKE '%'||#{keyword}||'%' OR title LIKE '%'||#{keyword}||'%' OR content LIKE '%'||#{keyword}||'%')
+	</select>
+	
+</mapper>

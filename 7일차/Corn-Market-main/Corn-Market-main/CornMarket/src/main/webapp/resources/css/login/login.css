@@ -1,0 +1,177 @@
+.login_wrap{
+    width:500px;
+
+    padding:10px;
+    margin:70px auto;
+}
+section{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+h2{
+    text-align: center;
+    display:block;
+    color: #757576;
+    line-height: 50px;
+    font-weight: 400;
+}
+
+.h2_st{
+    width:120px;
+    height:50px;
+    margin:0 auto;
+}
+
+.login_first{
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom:1px solid rgb(241, 196, 15);
+}
+
+.login_main{
+    width:150px;
+    height:50px;
+    text-align: center;
+    font-size: 15px;
+    color: #757576;
+    margin-bottom: 10px;
+    line-height: 50px;
+}
+
+.login_first input{
+    width:250px;
+    height:30px;
+    background-color: #ffffff;
+    border: 1px solid #757576;
+    border-radius: 2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.login_second{
+    margin-top: 10px;
+    display: flex;
+    color:#868b94;
+    font-size: 12px;
+}
+
+.login_second input{
+    margin-left: 20px;
+}
+.login_second .login_checkbox{
+	margin-right: 5px;
+}
+
+.login_second a{
+    margin-left: 260px;
+    text-decoration: none;
+    color:#868b94;
+}
+
+.login_third{
+    width:300px;
+    height:50px;
+    margin:50px auto;
+    display: flex;
+    margin-top: 50px;
+}
+
+.login_third button{
+    width:110px;
+    height:45px;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    line-height: 2.5em;
+    border-radius: 2px;
+    border: none;
+    background-color: rgb(241, 196, 15);
+    margin-left: 30px;
+    cursor:pointer;
+}
+
+/* 카카오 로그인 버튼 */
+.kakao-wrap{
+	display: block;
+	width: 300px;
+	height: 45px;
+	background-color: #FEE500;
+	border-radius: 5px;
+	margin:10px auto;
+	box-shadow: 2px 2px 7px -4px rgb(0 0 0 / 54%);
+}
+.simple_login1{
+	display: block;
+	width: 300px;
+	height: 45px;
+	font-weight: bold;
+    cursor:pointer;
+}
+/* 네이버 로그인 버튼 */
+.naver-wrap{
+	display: flex;
+	width: 300px;
+	height: 45px;
+	background-color: #03c75a;
+	border-radius: 5px;
+    margin:10px auto;
+    box-shadow: 2px 2px 7px -4px rgb(0 0 0 / 54%);
+}
+.simple_login2{
+	display: block;
+	width: 45px;
+	height: 45px;
+    cursor:pointer;
+}
+.naver-wrap span{
+	width: 225px;
+	height: 45px;
+	color: white;
+	font-size: 14px;
+	font-weight: 300;
+	text-align: center;
+	line-height: 45px;	
+	letter-spacing: -0.7px;
+}
+/* 구글 로그인 버튼 */
+.google-wrap{
+	display: flex;
+	align-items: center;
+	width: 300px;
+	height: 45px;
+	background-color: #FFFFFF;
+	border-radius: 5px;
+    margin:10px auto;
+    box-shadow: 2px 2px 7px -4px rgb(0 0 0 / 54%);
+}
+.google-wrap span{
+	width: 232px;
+	height: 45px;
+	color: rgb(0 0 0 / 54%);
+	font-size: 14px;
+	font-weight: 600;
+	text-align: center;
+	line-height: 45px;	
+	letter-spacing: 1px;
+}
+.simple_login3{
+	display: block;
+	width: 25px;
+	height: 25px;
+    cursor:pointer;
+    margin: 0 10px;
+}
+
+.login_fourth{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.login_fourth a{
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: bold;
+    color:white;
+}
