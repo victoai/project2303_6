@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.batis.slideMapper">
+    <select id="getTotalCnt" resultType="int">
+       SELECT count(*) FROM shoptbl
+    </select>
+    
+    
+    <select id="getListSlide" resultType="SlideDTO">
+       SELECT * FROM (SELECT  rownum num , content, likenum, image1 FROM shoptbl)
+       WHERE num BETWEEN 1 AND #{itemNum}
+    </select>
+</mapper>

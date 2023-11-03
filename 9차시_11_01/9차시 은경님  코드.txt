@@ -1,0 +1,6 @@
+select num, ct.contentid, ct.contenttypeid, ct.title, sd.sidocode, sd.nickname, sg.sigungucode, sg.name, ct.createdtime, ct.modifiedtime, ct.mapx, ct.mapy, ct.firstimage  from 
+(select rownum as num, contentid, contenttypeid, title, sidoCode,  LPAD(sidoCode, 2, '0') || LPAD(sigunguCode, 3, '0') AS sigungucode, createdtime, modifiedtime, mapx, mapy,firstimage from 
+(select * from contentInfoTbl where contenttypeid = '12' and sidoCode= 8 order by createdtime desc)) ct
+join SidoTbl sd on sd.sidocode = ct.sidocode
+join SigunguTbl sg on sg.sigungucode = ct.sigungucode
+where num between 1 and 10;

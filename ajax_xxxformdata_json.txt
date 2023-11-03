@@ -1,0 +1,108 @@
+
+@Controller
+public class AjaxController {
+
+	
+	
+	@RequestMapping( value="/ajax1", method = RequestMethod.POST )
+	public void data( String id , String pw) {
+		
+		System.out.println ( id);
+		System.out.println( pw);
+	}
+	
+	
+	
+	
+	@RequestMapping( value="/ajax2", method = RequestMethod.POST )
+	public void data2( User user) {
+		
+		System.out.println ( user);
+		 
+	}
+	
+}
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+
+	function callA(){
+		
+		let user = { id:"test" ,pw:"dfdfdfdf"};
+		
+		$.ajax({
+			type:"post",
+			url:"ajax1",
+			data: user,
+			success: function( data){
+				alert( data);
+			},
+			err:function(){
+				alert("dkfdfkdfk");
+			}
+			
+		});
+	}
+	
+	
+	function callB(){
+		
+		let user = { id:"test" ,pw:"dfdfdfdf"};
+		
+		$.ajax({
+			type:"post",
+			url:"ajax2",
+			data: user,
+			success: function( data){
+				alert( data);
+			},
+			err:function(){
+				alert("dkfdfkdfk");
+			}
+			
+		});
+	}
+</script>
+</head>
+<body>
+<button  onclick="callA()">클릭</button>
+<button  onclick="callB()">클릭</button>
+</body>
+</html>
+
+
+
+//json
+
+
+let test= { "name":"coco" , "age":99,  "address": "서울시"} ;
+
+
+$. ajax( {
+  type:"post", 
+  url:"test/home" ,
+  contentType: "application/json" ,
+  dataType:"json", 
+  data : JSON.stringify(test) , 
+  success: function( res) {  console.log( res) },
+  err: function ( err){ console.log( err}
+  }
+);
+
+
+contentType: 서버에 데이터를 보낼 때 Json데이터형식 지정
+beforeSend : function(){}  =>  HTTP 요청 전에 호출되는 함수 
+success : function(){} - HTTP요청 성공시 호출되는 함수 
+error : function(){}  -> HTTP 요청 실패시 호출되는 함수 
+complete : function(){}  ->HTTP  요청 완료시 호출되는 함수 ( 요청성공 ,실패 여부와 관계없이 실행)
+
+
+

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body {
+  margin: 0;
+  padding: 0;
+
+
+  
+}
+
+.slider-container {
+  width: 600px;
+  overflow: hidden;
+  margin: 0 auto;
+
+  position: absolute;
+  right: 10px;
+}
+
+.slider {
+  display: flex;
+  width: 1800px; /* 슬라이더 전체의 너비 (슬라이드 개수 * 슬라이드 너비) */
+  animation: slide 20s linear infinite; /* 무한 슬라이딩을 위한 애니메이션 */
+  
+}
+
+.slide {
+  width: 300px; /* 각 슬라이드의 너비 */
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3498db;
+  color: #fff;
+  font-size: 24px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  16.66% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-300px); /* 슬라이딩할 거리 */
+  }
+  33.33% {
+    transform: translateX(-300px);
+  }
+  40% {
+    transform: translateX(-600px); /* 슬라이딩할 거리 */
+  }
+  50% {
+    transform: translateX(-600px);
+  }
+  55.66% {
+    transform: translateX(-900px); /* 슬라이딩할 거리 */
+  }
+  66.66% {
+    transform: translateX(-900px);
+  }
+  72% {
+    transform: translateX(-1200px); /* 슬라이딩할 거리 */
+  }
+  83.33% {
+    transform: translateX(-1200px);
+  }
+  88.66% {
+    transform: translateX(-1500px); /* 슬라이딩할 거리 */
+  }
+  100% {
+    transform: translateX(-1500px);
+  }
+}
+
+    </style>
+</head>
+<body>
+  <div class="slider-container">
+    <div class="slider">
+      <div class="slide">Slide 1</div>
+      <div class="slide">Slide 2</div>
+      <div class="slide">Slide 3</div>
+      <div class="slide">Slide 4</div>
+      <div class="slide">Slide 5</div>
+      <div class="slide">Slide 1</div> <!-- 1번 슬라이드를 다시 추가하여 무한 루프 구현 -->
+    </div>
+  </div>
+</body>
+<script>
+    
+    const slider = document.querySelector('.slider');
+
+slider.addEventListener('mouseover', () => {
+  slider.style.animationPlayState = 'paused';
+});
+
+slider.addEventListener('mouseout', () => {
+  slider.style.animationPlayState = 'running';
+});
+</script>
+</html>

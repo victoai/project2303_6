@@ -1,0 +1,3 @@
+  erros  running builder  'maven project  builder' on project   'ddd'
+
+=> .m2 폴더 (정상적인 .m2 폴더 복사후 해결됨)

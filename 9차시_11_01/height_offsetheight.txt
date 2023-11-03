@@ -1,0 +1,16 @@
+https://blogpack.tistory.com/706
+
+
+
+scrollHeight   : 스크롤된 높이포함
+clientHeight  : 마진포함 높이
+offsetHeight : border와 padding  높이 포함 
+
+
+
+offsetHeight은 css로 요소의 높이를 지정할 때 정해지는 높이이다
+패딩과 테두리가 포함되며 box-sizing  모델 속성 값에 따라 패딩과 테두리 값이 제외될 수 있으므로 주의해야 한다
+요소가 감춤 상태인 경우  offsetHeight는 0을 반환한다
+
+
+

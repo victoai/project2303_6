@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.batis.boardMapper">
+
+    <select id="getListPage" resultType="BoardDTO">
+       SELECT * FROM (SELECT  rownum num , content, likenum, image1 FROM shoptbl)
+       WHERE num BETWEEN #{startPage} AND #{endPage}
+    </select>
+    
+    <select id="getTotalCnt" resultType="int">
+       SELECT count(*) FROM shoptbl
+    </select>
+    
+</mapper>

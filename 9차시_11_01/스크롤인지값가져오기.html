@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>무한 스크롤 예제</title>
+    <meta charset="UTF-8">
+    
+    <style>
+    
+     #content{
+     border:1px solid black;
+     height: 3000px;
+     
+     
+     }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <!-- 여기에 데이터를 동적으로 추가할 내용. -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script  > 
+ // 초기 페이지 번호
+    let page = 1;
+    let loading = false;
+
+    // 스크롤 이벤트 핸들러
+    function handleScroll() {
+        if (loading) return;
+        
+        const content = document.getElementById('content');
+        
+        // 스크롤 위치 확인
+        const scrollPosition = window.innerHeight + window.scrollY;
+        const contentHeight = content.offsetHeight;
+
+        
+        
+        // 스크롤이 화면 하단에 도달하면 데이터를 가져옴
+        if (scrollPosition >= contentHeight) {
+            loading = true;
+            
+            // AJAX를 사용하여 데이터를 서버로부터 가져오기
+            fetchData(page);
+            page++;
+        }
+    }
+
+   
+    function fetchData(page) {
+        
+        $.ajax({
+            url: '/page/a',     //  <=   변경
+            method: 'GET',
+            data: "page=" + page,
+            success: function(response) {
+                // 데이터 가져오기 성공
+                const content = document.getElementById('content');
+                content.innerHTML += response; // 가져온 데이터를 내용에 추가
+                loading = false;
+            },
+            error: function() {
+                // 데이터 가져오기 실패
+                loading = false;
+            }
+        });
+    }
+
+    // 스크롤 이벤트 리스너 등록
+    window.addEventListener('scroll', handleScroll);
+
+    // 초기 페이지 로딩 시 데이터 가져오기
+    fetchData(page);
+</script>
+</body>
+</html>
