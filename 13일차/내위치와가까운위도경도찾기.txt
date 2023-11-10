@@ -1,0 +1,72 @@
+import java.util.ArrayList;
+import java.util.List;
+
+class Location {
+    String name;
+    double latitude;
+    double longitude;
+
+    public Location(String name, double latitude, double longitude) {
+        this.name = name;
+        this.latitude = latitude;
+        this.longitude = longitude;
+    }
+}
+
+public class ClosestLocationFinder {
+    public static void main(String[] args) {
+        // 현재 위치의 위도와 경도
+        double currentLatitude = 37.1234; // 현재 위치의 위도 (예시)
+        double currentLongitude = -123.4567; // 현재 위치의 경도 (예시)
+
+        // 비교할 위치들을 Location 객체로 정의
+        List<Location> locations = new ArrayList<>();
+        locations.add(new Location("Place A", 37.5678, -122.7890));
+        locations.add(new Location("Place B", 38.1234, -123.4567));
+        locations.add(new Location("Place C", 36.7890, -124.5678));
+
+        // 가장 가까운 위치 초기화
+        Location closestLocation = null;
+        double closestDistance = Double.MAX_VALUE;
+
+        // 각 위치와 현재 위치 간의 거리 계산 및 가장 가까운 위치 업데이트
+        for (Location location : locations) {
+            double distance = calculateDistance(currentLatitude, currentLongitude, location.latitude, location.longitude);
+
+            // 현재까지 가장 가까운 위치보다 더 가까운 경우 업데이트
+            if (distance < closestDistance) {
+                closestDistance = distance;
+                closestLocation = location;
+            }
+        }
+
+        // 가장 가까운 위치 출력
+        if (closestLocation != null) {
+            System.out.println("가장 가까운 위치: " + closestLocation.name);
+            System.out.println("거리: " + closestDistance + " km");
+        } else {
+            System.out.println("가장 가까운 위치를 찾을 수 없습니다.");
+        }
+    }
+
+    // 두 지점 간의 거리 계산 메서드 (Haversine 공식 사용)
+    public static double calculateDistance(double lat1, double lon1, double lat2, double lon2) {
+        final int R = 6371; // 지구 반경 (단위: km)
+
+        double lat1Rad = Math.toRadians(lat1);
+        double lon1Rad = Math.toRadians(lon1);
+        double lat2Rad = Math.toRadians(lat2);
+        double lon2Rad = Math.toRadians(lon2);
+
+        double dlat = lat2Rad - lat1Rad;
+        double dlon = lon2Rad - lon1Rad;
+
+        double a = Math.sin(dlat / 2) * Math.sin(dlat / 2) +
+                   Math.cos(lat1Rad) * Math.cos(lat2Rad) *
+                   Math.sin(dlon / 2) * Math.sin(dlon / 2);
+
+        double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+
+        return R * c;
+    }
+}

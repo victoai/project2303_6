@@ -1,0 +1,14 @@
+
+1. 은경님 질문:  Oracle에서 insert  SQL문 뽑기
+참고블러그 : https://ssunws.tistory.com/6
+
+
+SQL Developer의 도구>데이터베이스 익스포트> insert문, excel, delimited 형식으로 내보내기 가능
+ 1) insert문으로 뽑으면 sql창에서 @'절대경로\파일명.sql'로 실행가능 
+
+디벨로퍼 -> 도구 ->  데이터 익스포트  ->  ddl 익스포트   , insert  
+.sql로 생성됨
+
+ 
+
+

@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans:wght@100&family=Orbit&display=swap"
+        rel="stylesheet">
+<style>
+
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+    
+
+    section{
+        position: relative;
+    }
+
+
+    .showbg1{   /* 연보라색 백그라운드 이미지 */
+        height: 530px;
+        width: 100%;
+        background-color: rgb(206, 220, 255);
+        z-index: -1;
+    }
+
+
+    .showbg2{   /* 흰색 백그라운드 이미지 */
+        height: 390px;
+        width: 100%;
+        background-color: white;
+        z-index: -1;
+    }
+
+    
+    .showbg3{   /* 회색 백그라운드 이미지 */
+        width: 100%;
+        height: 640px;
+        background-color: #f4f5f7;
+        z-index: -1;
+    }
+
+
+    .sectionWrap{       /*내용 들어가는 div*/
+        position: absolute;
+        margin-left: 25%;
+        top: 0px;
+        width: 940px;
+        border: 1px solid gray;
+    }
+
+
+    .title{     /*대한민국 구석구석 지역 정보 div*/
+        margin-top: 100px;
+        width: 50%;
+        height: 150px;
+        border: 1px solid black;
+    }
+
+
+    .title h2{  /*대한민국 구석구석 지역 정보 텍스트*/
+        margin-top: 25px;
+        font-weight: 800;
+        font-size: 30px;
+    }
+
+
+    .title p{
+        font-size: 28px;
+        font-weight: 500;
+    }
+
+
+
+    .locationBox{   /*지역 가장 큰 div*/
+        position: relative;
+        margin: 0 auto;
+        display: flex;
+        height: 50px;
+        border: 1px solid slateblue;
+    }
+
+
+
+    .locationBtn{   /*지역 버튼*/
+        height: 35px;
+        width: 50px;
+        border: 1px solid transparent;
+        border-radius: 30px;
+        text-align: center;
+        line-height: 35px;
+        margin: 5px 10px;
+    }
+
+
+
+    .locationBtn.active{   /*지역 버튼 클릭 후*/
+        height: 35px;
+        width: 60px;
+        border: 1px solid transparent;
+        background-color: #333;
+        color: white;
+        border-radius: 20px;
+        text-align: center;
+        line-height: 35px;
+        margin: 5px 10px;
+        font-weight: bold;
+    }
+
+
+
+    .locationSubBox{    /*지역 버튼 클릭*/
+        display: flex;
+        position: relative;
+        margin: 0 auto;
+        height: 50px;
+        border: 1px solid darkgoldenrod;
+    }
+
+
+
+    .locationLogoWrap{  /*지역 로고 버튼 랩*/
+        display: flex;
+        width: 120px;
+        height: 50px;
+        border: 1px solid blue;
+    }
+
+
+    .locationLogoBox{   /*지역 로고 박스*/
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+    }
+
+
+    .locationLogoIcon{  /*지역 로고 아이콘*/
+        width: 45px;
+        height: 45px;
+        border: 1px solid white;
+        border-radius: 30px;
+        background-color: white;
+
+    }
+
+
+    .locationLogoName{  /*지역 */
+        width: 70px;
+        height: 50px;
+        border: 1px solid darkgreen;
+    }
+
+
+    .swiperWrapper{ /* 축제 행사 지역 싸고 있는 div */
+        position: relative;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        height: 300px;
+        width: 940px;
+        border: 1px solid darkolivegreen;
+    }
+
+
+    .swiperBox{ /* 축제 행사 지역 박스 */
+        width: 300px;
+        height: 270px;
+        border: 1px solid black;
+        background-color: white;
+        border-radius: 5px;
+    }
+
+
+    .prefaceFlagBox{   /* 축제 행사 지역 말풍선 박스*/
+        position: relative;
+        width: 300px;
+        height: 60px;
+        border: 1px solid darkred;
+    }
+
+
+    .prefaceFlag{
+        transform: translate(25px, 15px);
+        position: absolute;
+        width: 70px;
+        height: 30px;
+        border: 1px solid #333;
+        background-color: #333;
+        border-radius: 15px 13px 13px 0;
+        color: white;
+        letter-spacing: -2px;
+        padding-left: 10px;
+        padding-top: 5px;
+    }
+
+
+    .swiperCommentBox{ /* 축제 행사 지역 내용*/
+        position: relative;
+        width: 300px;
+        height: 170px;
+        border: 1px solid skyblue;
+    }
+
+
+    
+    .swiperCommentBox strong{ /* 축제 행사 지역 타이틀*/
+        position: absolute;
+        font-size: 22px;
+        margin: 25px 25px;
+    }
+
+
+
+    .swiperCommentBox p{    /* 축제 행사 지역 내용*/
+        position: absolute;
+        font-size: 16px;
+        margin: 70px 26px;
+    }
+
+
+
+    .swiperDetailBox{   /* 자세히보기 박스 */
+        position: relative;
+        width: 300px;
+        height: 35px;
+        border: 1px solid springgreen;
+    }
+
+
+    .swiperDetailBox a{     /* 자세히보기 박스 링크 */
+        transform: translate(200px);
+        position: absolute;
+        color: gray;
+    }
+
+
+    .listSub{   /* 시군구 div */
+        margin-top: 40px;
+        width: 100%;
+        height: 115px;
+        border: 1px solid #f0f0f0;
+        border-radius: 10px;
+    }
+
+
+
+    .hotplaceTitle{     /* 핫플 div */
+        margin-top: 50px;
+        width: 100%;
+        height: 30px;
+        border: 1px solid darkorchid;
+    }
+
+
+    .hotplaceTitle h3{    /* 우리 지역 핫플이 궁금해? */
+        font-size: 25px;
+    }
+
+
+
+    .hotplaceDiv{       /* 추천 여행지, 추천 맛집 div */
+        width: 940px;
+        border: 1px solid rebeccapurple;
+        margin-top: 35px;
+    }
+
+
+    .hotplaceNameDiv{       /* OO 추천 여행지, 추천 이름 div */
+        margin-top: 20px;
+        margin-bottom: 15px;
+        display: flex;
+        width: 100%;
+        border: 1px solid gold;
+        height: 50px;
+    }
+
+
+    .hotplaceName{  /* OO -> 텍스트 넣는 div */
+        width: 80px;
+        height: 50px;
+        border: 1px solid slateblue;
+        margin-right: 10px;
+    }
+
+
+    .hotplaceDiv h4{    /* 추천 여행지, 추천 맛집 텍스트 */
+        line-height: 2.3;
+        width: 400px;
+        font-size: 22px;
+    }
+
+
+    .recommendWrapDiv{         /* 추천 여행지, 추천 맛집 감싼 div */
+        width: 940px;
+        height: 220px;
+        border: 1px solid darkseagreen;
+        justify-content: space-between;
+        display: flex;
+    }
+
+
+    .recommendWrapBox{      /* 추천 여행지, 추천 맛집 각각 1개 박스 div */
+        width: 220px;
+        height: 220px;
+        border: 1px solid gray;
+        border-radius: 10px;
+
+    }
+
+
+
+    .recommendImg{       /* 추천 여행지, 추천 맛집 이미지 div */
+        width: 220px;
+        height: 150px;
+        border: 1px solid darksalmon;
+        border-radius: 10px 10px 0 0;
+    }
+
+
+    .recommendImg img{      /* 추천 여행지, 추천 맛집 이미지 url */
+        width: 220px;
+        height: 150px;
+        border-radius: 10px 10px 0 0;
+    }
+
+
+
+    .recommendDetail{   /* 추천 여행지, 추천 맛집 이름과 설명 div */
+        width: 220px;
+        padding-top: 10px;
+        height: 58px;
+        background-color: white;
+        border-radius: 0 0 10px 10px;
+        text-align: center;
+    }
+
+
+    .recommendDetail strong{        /* 추천 여행지, 추천 맛집 제목 */
+        display: block;
+        width: 220px;
+        color: #333;
+    }
+
+
+    .recommendDetail p{     /* 추천 여행지, 추천 맛집 지역 설명 */
+        font-size: 13px;
+        color: #666;
+        margin-top: 3px;
+    }
+
+
+
+    .dateWrap{          /* 축제·행사 어디까지 가봤니? 전체 감싸는 div */
+        margin-top: 30px;
+        border: 1px solid pink;
+        width: 100%;
+        height: 750px;
+    }
+
+
+
+    .Title{     /* 핫플 div */
+        margin-top: 50px;
+        width: 100%;
+        height: 30px;
+        border: 1px solid darkorchid;
+    }
+
+
+    .FestivalNameDiv{       /* OO 추천 여행지, 추천 이름 div */
+        margin-top: 20px;
+        margin-bottom: 15px;
+        display: flex;
+        width: 100%;
+        border: 1px solid gold;
+        height: 50px;
+    }
+
+
+
+    .FestivalName{  /* OO -> 텍스트 넣는 div */
+        width: 80px;
+        height: 50px;
+        border: 1px solid slateblue;
+        margin-right: 10px;
+    }
+
+
+
+    .FestivalDiv h4{    /* 추천 여행지, 추천 맛집 텍스트 */
+        line-height: 2.3;
+        width: 400px;
+        font-size: 22px;
+    }
+
+
+
+    .FestivalDateDiv {      /* 추천 여행지, 추천 맛집 텍스트 */
+        margin-top: 20px;
+        margin-bottom: 15px;
+        width: 100%;
+        border: 1px solid gray;
+        height: 120px;
+    }
+
+
+    .DateLine{      /* Date 라인 */
+        width: 940px;
+        border: 1px solid #f0f0f0;
+        height: 0px;
+    }
+
+    .Line1{
+        margin-top: 15px;
+    }
+
+
+    .DateBox{       /* Date 감싼 div 박스 */
+        width: 940px;
+        border: 1px solid sandybrown;
+        height: 80px;
+    }
+
+
+
+
+</style>
+
+</head>
+<body>
+
+
+    <section>
+
+
+
+
+        <div class="showbg1">
+
+
+
+        </div>
+
+
+        <div class="showbg2">
+
+
+        </div>
+
+        
+        <div class="showbg3">
+
+
+        </div>
+
+
+        <div class="sectionWrap"> <!-- bigwrap 안에 내용 넣기 div -->
+
+
+
+            <div class="title">
+                <h2>대한민국 구석구석 지역 정보</h2>
+                <p>어디까지 알고 있니?</p>
+            </div>
+
+
+
+            <div class="locationBox">
+
+
+                <div class="locationBtn active" onclick="locationclick(event, 1)">서울</div>
+                <div class="locationBtn" onclick="locationclick(event, 2)">부산</div>
+                <div class="locationBtn" onclick="locationclick(event, 3)">대구</div>
+                <div class="locationBtn" onclick="locationclick(event, 4)">인천</div>
+                <div class="locationBtn" onclick="locationclick(event, 5)">광주</div>
+                <div class="locationBtn" onclick="locationclick(event, 6)">대전</div>
+                <div class="locationBtn" onclick="locationclick(event, 7)">울산</div>
+                <div class="locationBtn" onclick="locationclick(event, 8)">세종</div>
+                <div class="locationBtn" onclick="locationclick(event, 9)">경기</div>
+                <div class="locationBtn" onclick="locationclick(event, 10)">강원</div>
+                <div class="locationBtn" onclick="locationclick(event, 11)">충북</div>
+                <div class="locationBtn" onclick="locationclick(event, 12)">충남</div>
+                <div class="locationBtn" onclick="locationclick(event, 13)">전북</div>
+                <div class="locationBtn" onclick="locationclick(event, 14)">전남</div>
+                <div class="locationBtn" onclick="locationclick(event, 15)">경북</div>
+                <div class="locationBtn" onclick="locationclick(event, 16)">경남</div>
+                <div class="locationBtn" onclick="locationclick(event, 17)">제주</div>
+
+
+            </div>
+
+
+
+            <div class="locationSubBox">    <!-- 17개 지역 감싼 div -->
+
+
+                <div class="locationLogoWrap">
+
+                    <div class="locationLogoBox">
+                        <div class="locationLogoIcon"><img src="" alt=""></div>
+                    </div>
+
+
+                    <div class="locationLogoName" id="loacationname"></div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="swiperWrapper">     <!-- 축제 공연행사 지역 내용 감싼 div -->
+
+                <div class="swiperBox">
+                    <div class="prefaceFlagBox">
+                        <div class="prefaceFlag">문화공간</div>
+                    </div>
+                    <div class="swiperCommentBox">
+                        <strong>특별한 가을 식물원</strong>
+                        <p>풍경이 아름다운 울산캠퍼스 <br> 식물원과 북카페 무료 관람</p>
+                    </div>
+                    <div class="swiperDetailBox">
+                        <a href="">자세히보기</a>
+                    </div>
+                </div>
+                
+
+
+                <div class="swiperBox">
+                    <div class="prefaceFlagBox">
+                        <div class="prefaceFlag">체험여행</div>
+                    </div>
+                    <div class="swiperCommentBox">
+                        <strong>울산대공원 생태여행관</strong>
+                        <p>식물, 곤충 관람 및 체험이 가득해 <br> 아이들과 방문하기 좋은 곳</p>
+                    </div>
+                    <div class="swiperDetailBox">
+                        <a href="">자세히보기</a>
+                    </div>
+                </div>
+
+
+                <div class="swiperBox">
+                    <div class="prefaceFlagBox">
+                        <div class="prefaceFlag">지역명소</div>
+                    </div>
+                    <div class="swiperCommentBox">
+                        <strong>자수정 동굴나라</strong>
+                        <p>볼거리가 많고 테마가 다양한 <br> 사계절 가족여행지 동굴 테마파크 </p>
+                    </div>
+                    <div class="swiperDetailBox">
+                        <a href="">자세히보기</a>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="listSub">       <!-- 시군구 홈페이지 div -->
+
+
+            </div>
+
+
+
+            <div class="hotplaceTitle">     <!-- 시군구 홈페이지 div -->
+                <h3>우리 지역 핫플이 궁금해?</h3>
+            </div>
+
+
+
+            <div class="hotplaceDiv">       <!-- 우리 지역 추천 여행지, 추천 맛집 감싼 div -->
+
+                <div class="hotplaceNameDiv">
+                    <div class="hotplaceName"></div>
+                    <h4>추천 여행지</h4>
+                </div>
+
+                <div class="recommendWrapDiv">
+
+                    <a href="">
+                    <div class="recommendWrapBox">
+                        <div class="recommendImg">
+                            <img src="https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&id=988a7129-d83b-45b9-810c-0bc6013b765e&mode=progress" alt="">
+                        </div>
+                        <div class="recommendDetail">
+                            <strong>물치항</strong>
+                            <p>강원특별자치도 양양군</p>
+                        </div>
+                    </div>
+                    </a>
+
+
+                    <a href="">
+                    <div class="recommendWrapBox">
+                        <div class="recommendImg">
+                            <img src="https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&id=a96e7abc-7564-40b9-8629-d4d69af5e3e2&mode=progress" alt="">
+                        </div>
+                        <div class="recommendDetail">
+                            <strong>서피비치, 서핑(양양)</strong>
+                            <p>강원특별자치도 양양군</p>
+                        </div>
+                    </div>
+                    </a>
+
+
+                    <a href="">
+                    <div class="recommendWrapBox">
+                        <div class="recommendImg">
+                            <img src="https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&id=cf127e65-b464-4e63-be86-ad9721147337&mode=progress" alt="">
+                        </div>
+                        <div class="recommendDetail">
+                            <strong>제이드가든</strong>
+                            <p>강원특별자치도 춘천시</p>
+                        </div>
+                    </div>
+                    </a>
+
+
+                    <a href="">
+                    <div class="recommendWrapBox">
+                        <div class="recommendImg">
+                            <img src="https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&id=a543f3eb-f9ed-4823-bd3d-6669b0d60704&mode=progress" alt="">
+                        </div>
+                        <div class="recommendDetail">
+                            <strong>케이티엔지(KT&G)</strong>
+                            <p>강원특별자치도 춘천시</p>
+                        </div>
+                    </div>
+                    </a>
+
+
+
+                </div>
+
+
+                <div class="hotplaceNameDiv">
+                    <div class="hotplaceName"></div>
+                    <h4>추천 맛집</h4>
+                </div>
+
+
+                <div class="recommendWrapDiv">
+
+
+                    <a href="">
+                    <div class="recommendWrapBox">
+                        <div class="recommendImg">
+                            <img src="https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&id=57a06175-d36c-443c-a49f-c2b6490eea93&mode=progress" alt="">
+                        </div>
+                        <div class="recommendDetail">
+                            <strong>스위스램</strong>
+                            <p>강원특별자치도 평창군</p>
+                        </div>
+                    </div>
+                    </a>
+
+
+                    
+                    <a href="">
+                    <div class="recommendWrapBox">
+                        <div class="recommendImg">
+                            <img src="https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&id=269a9313-24a7-4030-9f36-141c750ce4f3&mode=progress" alt="">
+                        </div>
+                        <div class="recommendDetail">
+                            <strong>마추픽추</strong>
+                            <p>강원특별자치도 평창군</p>
+                        </div>
+                    </div>
+                    </a>
+
+
+
+                    <a href="">
+                    <div class="recommendWrapBox">
+                        <div class="recommendImg">
+                            <img src="https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&id=261cf549-16df-4f3d-b254-1648b03d1dc5&mode=progress" alt="">
+                        </div>
+                        <div class="recommendDetail">
+                            <strong>홍천한우애</strong>
+                            <p>강원특별자치도 홍천군</p>
+                        </div>
+                    </div>
+                    </a>
+
+
+
+                    <a href="">
+                    <div class="recommendWrapBox">
+                        <div class="recommendImg">
+                            <img src="https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&id=8bc5ebb9-cff0-40ba-ae75-290c15f2b438&mode=progress" alt="">
+                        </div>
+                        <div class="recommendDetail">
+                            <strong>계륵</strong>
+                            <p>강원특별자치도 춘천시</p>
+                        </div>
+                    </div>
+                    </a>
+
+                </div>
+
+
+
+                <div class="dateWrap">
+
+
+                    <div class="FestivalNameDiv">
+                        <div class="FestivalName"></div>
+                        <h4>축제·행사 어디까지 가봤니?</h4>
+                    </div>
+
+
+
+                    <div class="FestivalDateDiv">
+
+                        <div class="DateLine  Line1"></div>
+
+
+
+                        <div class="DateBox">
+
+
+                        </div>
+
+
+
+                        <div class="DateLine"></div>
+
+
+
+                    </div>
+
+
+
+
+
+
+                </div>
+
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+    </section>
+
+
+    
+</body>
+
+
+<script>
+
+
+function locationclick(event, i) {
+
+    var btns = document.querySelectorAll(".locationBtn");
+
+    btns.forEach(function(btn, i) {
+        if(event.currentTarget == btn) {
+            btn.classList.add("active");
+        } else {
+            btn.classList.remove("active");
+        }
+    });
+    
+
+     
+
+
+        var nametop = ['서울', '부산', '대구', '인천', '광주', '대전', '울산', '세종시', '경기도',
+                        '강원특별자치도', '충청북도', '충청남도', '전라북도', '전라남도', '경상북도', '경상남도',
+                        '제주도'];
+
+
+
+        //서울영역 
+           document.querySelector("#loacationname").innerHTML  = nametop[i-1];
+ 
+
+
+}
+
+
+
+</script>
+
+
+</html>

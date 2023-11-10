@@ -1,0 +1,11 @@
+<c:choose>
+								    <c:when test="${item.eventstartdate gt currentDate}">
+								        <div style="background-color:#13294b;" class="progress">진행전</div>
+								    </c:when>
+								    <c:when test="${item.eventstartdate le currentDate && currentDate le item.eventenddate}">
+								        <div style="background-color:red;" class="progress">진행중</div>
+								    </c:when>
+								    <c:otherwise>
+								        <div style="background-color:#888888;" class="progress">종료</div>
+								    </c:otherwise>
+								</c:choose>

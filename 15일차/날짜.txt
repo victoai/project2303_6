@@ -1,0 +1,31 @@
+<li>
+	                	<form action="/searchapi/eventDetail" method="post">
+	                	<input type="hidden" id="contentIdInput" name="contentId" value="3026312">
+	                    <ul class="contentList">
+	                        <li class="contentList_imgBox">
+	                            <img class="content_mainImg" src="https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&id=8ecd0f6d-30b0-49f4-b223-23ffd1ebb127" onclick = "detail(this)">
+	                            <!--  jstl 비교 lt(미만), le(이하), gt(초과), ge(이상) -->
+	                            2023-11-10
+	                            
+	                 				
+	                 				
+	                 				
+	                 				<div style="background-color:#888888;" class="progress">종료</div>
+	                 				
+                 				
+	                            
+	                      
+	                        </li>
+	                        <li class="contentList_sub">
+	                        	<div class="contentList_text">
+	                        		<h3 onclick = "detail(this)">한강불빛공연 드론 라이트쇼</h3>
+		                            <p>서울 광진구</p>
+		                            <p>[2023-09-08 ~ 2023-11-30]</p>
+	                        	</div>
+	                        	<div class="contentList_moreWrap" id="list0" >
+	                        		<img  class="more_btn" src="https://korean.visitkorea.or.kr/resources/images/sub/btn_dot2.png" onclick = "imgClick(this)">
+	                        	</div>
+	                        </li>            
+	                    </ul>
+	                    </form> 
+	                </li>

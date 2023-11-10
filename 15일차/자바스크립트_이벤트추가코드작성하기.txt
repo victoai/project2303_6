@@ -1,0 +1,33 @@
+
+
+1. window.addEventListener( "load" , function() {   // alert("hi");  //코드작성  }  );
+
+
+// 코드작성에 추가하기
+
+2. document.querySelector("#btn").addEventListener("click", function(){
+    alert("클릭되었어");
+
+ 
+});
+
+
+3. document.querySelector("#btn").addEventListener("click", function(){
+    alert("클릭되었어");
+
+      //유효성확인하기
+        a();
+
+
+      //서버요청코드
+       b();
+ 
+});
+
+
+
+function a(){
+}
+
+function b(){
+}
