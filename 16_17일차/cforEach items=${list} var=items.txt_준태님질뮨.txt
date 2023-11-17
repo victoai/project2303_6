@@ -1,0 +1,32 @@
+<c:forEach items="${list}" var="items">
+    <c:if test="${item.optionCategory eq items.optionCategory}">
+        <c:choose>
+            <c:when test="${items.optionSelectType eq 1 }">
+                <div class="option-list">
+                    <input type="radio" name="${item}"> 
+                    <input value="${items.optionName}" class="upOptionName">
+                    <input value="${items.optionPrice}" class="upOptionPrice">
+                    <select name="upoptionStatus">
+                        <option value="1" ${items.optionStatus eq '1' ? 'selected' : ''}>비공개</option>
+                        <option value="0" ${items.optionStatus eq '0' ? 'selected' : ''}>공개</option>
+                    </select>
+                    <button onclick="updateSellerOption(${items.optionCode},this)">수정</button>
+                    <button onclick="optiondelete(${items.optionCode})">삭제</button>
+                </div>
+            </c:when>
+            <c:otherwise>
+                <div class="option-list">
+                    <input type="checkbox" name="${item}"> 
+                    <input value="${items.optionName}" class="upOptionName">
+                    <input value="${items.optionPrice}" class="upOptionPrice">
+                    <select name="upoptionStatus" id="upoptionStatus">
+                        <option value="1" ${items.optionStatus eq '1' ? 'selected' : ''}>비공개</option>
+                        <option value="0" ${items.optionStatus eq '0' ? 'selected' : ''}>공개</option>
+                    </select>
+                    <button onclick="updateSellerOption(${items.optionCode},this)">수정</button>
+                    <button onclick="optiondelete(${items.optionCode})">삭제</button>
+                </div>
+            </c:otherwise>
+        </c:choose>
+    </c:if>
+</c:forEach>

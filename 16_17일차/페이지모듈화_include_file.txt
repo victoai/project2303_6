@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Main Page</title>
+</head>
+<body>
+
+    <h1>Welcome to the Main Page</h1>
+
+    <!-- Include the header.jsp file -->
+    <%@ include file="header.jsp" %>
+
+    <p>Main content goes here.</p>
+
+    <!-- Include the footer.jsp file -->
+    <%@ include file="footer.jsp" %>
+
+</body>
+</html>
+
+header.jsp
+
+<div>
+    <h2>This is the Header</h2>
+    <p>Header content goes here.</p>
+</div>
+
+
+footer.jsp
+<div>
+    <p>Footer content goes here.</p>
+    <p>&copy; 2023 My Website</p>
+</div>
+ 
+

@@ -1,0 +1,27 @@
+// 모달창
+	function modalWindow(){
+		 let subMenu = document.querySelector(".subMenu");
+		 if (subMenu.style.display === "none" || subMenu.style.display === '') {
+	        subMenu.style.display = "block";
+	     } else {
+	        subMenu.style.display = "none";
+	     }
+	}
+<button class="more_btn" onclick="modalWindow()"></button>
+                            <div class="date">		
+                                <em class="nickName">민호</em>
+                                <span>2023. 11. 7.</span>	
+                            </div>
+        
+                            <!-- 모달창 -->
+                            <ul class="subMenu">
+                                <li class="delete"><span>삭제</span></li>
+                            </ul>
+function modalWindow(){
+		 let subMenu = document.querySelector(".subMenu");
+		 if (subMenu.style.display === "none" || subMenu.style.display === '') {
+	        subMenu.style.display = "block";
+	     } else {
+	        subMenu.style.display = "none";
+	     }
+	}

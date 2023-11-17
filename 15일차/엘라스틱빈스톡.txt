@@ -1,0 +1,70 @@
+https://dangdangee.tistory.com/entry/AWS-Elastic-Beanstalk-%EC%83%81%ED%83%9C-unknown-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0%EB%B0%A9%EB%B2%95 
+
+elastic bean stalk
+
+
+The instance profile aws-elasticbeanstalk-ec2-role associated with the environment does not exist.
+ 
+
+1.  AWS의 IAM - 역할에 들어가 역할 만들기를 누른다
+2.  AWS서비스와   EC2를 체크하고 다음으로 넘어감
+3.  3가지 정책을 선택함 
+ AWSElasticBeanstalkWebTier
+AWSElasticBeanstalkWorkerTier
+AWSElasticBeanstalkMulticontainerDocker
+
+4. 역할 이름을   aws-elasticbeanstalk-ec2-role 입력하고 
+   신뢰할 수 있는 엔티티 선택에 코드입력한다
+{
+  "Version": "2008-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "ec2.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+
+
+
+
+//
+Select a service role that has the 'AWSElasticBeanstalkManagedUpdatesCustomerRolePolicy' managed policy.
+
+
+
+기존 오류의 해결과정과 비슷하게 진행하면 해결할 수 있다.
+
+1. IAM - 역할 - 역할 만들기로 들어간다.
+
+2. AWS 서비스와 EC2를 체크하고 다음으로 넘어간다.
+
+3. 2가지 정책을 선택한 후 다음을 누른다.
+
+AWSElasticBeanstalkManagedUpdatesCustomerRolePolicy
+ AWSElasticBeanstalkEnhancedHealth
+4. 역할 이름을 aws-elasticbeanstalk-service-role로 입력하고 신뢰할 수 있는 엔티티 선택에 코드를 입력한다.
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Sid": "",
+        "Effect": "Allow",
+        "Principal": {
+          "Service": "elasticbeanstalk.amazonaws.com"
+        },
+        "Action": "sts:AssumeRole",
+        "Condition": {
+          "StringEquals": {
+            "sts:ExternalId": "elasticbeanstalk"
+          }
+        }
+      }
+    ]
+}
+     
+

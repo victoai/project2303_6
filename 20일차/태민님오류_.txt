@@ -1,0 +1,14 @@
+org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: 경로 [/baemin]의 컨텍스트 내의 서블릿 [appServlet]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [행 [344]에서 [WEB-INF/views/seller/store_manage.jsp]을(를) 처리하는 중 예외 발생
+
+341: 		<div class="store-name">${readStore.storeName}</div>
+342: 		<div class="rating-review-minprice">
+343: 			<div>⭐: ${readStore.storeRating}</div>
+344: 			<div>리뷰수: ${RCount.reviewCount}</div>
+345: 			<div>최소주문금액: ${readStore.minOrderPrice}</div>
+346: 		</div>
+347: 		<ul class="menu-info-review-tab">
+
+
+Stacktrace:]을(를) 발생시켰습니다.
+javax.el.PropertyNotFoundException: [reviewCount] 특성이 [java.lang.Integer] 유형에 없습니다.

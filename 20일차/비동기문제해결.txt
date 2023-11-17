@@ -1,0 +1,37 @@
+function updateStore(element) {
+    alert("fgfg");
+    let formData = new FormData(element.closest('#updateForm'));
+
+    // Promise를 반환하는 함수 정의
+    function sendAjaxRequest(formData) {
+        return new Promise(function(resolve, reject) {
+            $.ajax({
+                type: "POST",
+                enctype: 'multipart/form-data',
+                processData: false,
+                contentType: false,
+                url: "/baemin/upsellerHome",
+                data: formData,
+                cache: false,
+                success: function(data) {
+                    resolve(data); // 성공 시 resolve 호출
+                },
+                error: function() {
+                    reject("매장정보 수정에 실패하였습니다."); // 실패 시 reject 호출
+                }
+            });
+        });
+    }
+
+    // Promise를 사용하여 비동기적으로 AJAX 요청 보내기
+    sendAjaxRequest(formData)
+        .then(function(data) {
+            alert("매장정보가 수정되었습니다.");
+            console.log(data);
+            // AJAX 요청이 완료된 후에 리로드
+            window.location.reload();
+        })
+        .catch(function(error) {
+            alert(error);
+        });
+}

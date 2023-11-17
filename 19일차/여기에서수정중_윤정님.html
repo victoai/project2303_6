@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <title>스와이퍼 예제</title>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <style>
+
+
+  .PosterBigWrap{      /* 포스터 전체 div */
+    position: absolute;
+    width: 960px;
+    height: 520px;
+    border: 1px solid black;
+  }
+
+
+  .swiper-container{
+    width: 900px;
+    height: 500px;
+    border: 1px solid black;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+
+
+  .swiper-slide{         /* 포스터 감싸는 개별 박스 */
+    position: relative;
+    width: 275px;
+    height: 500px;
+    border: 1px solid springgreen;
+    text-align: center;
+    overflow: hidden;
+    background-position: center;
+    background-size: 275px 500px;
+    background-size: cover;
+  }
+
+
+  .swiper-button-prev{    /* 이전 버튼 */
+    margin-left: -10px;
+    width: 30px;
+    height: 30px;
+    background: url(https://korean.visitkorea.or.kr/resources/images/main/btn_slide02.png) no-repeat;
+  }
+
+
+
+  .swiper-button-next{      /* 이후 버튼 */
+    margin-right: -10px;
+    width: 30px;
+    height: 30px;
+    background: url(https://korean.visitkorea.or.kr/resources/images/main/btn_slide03.png) no-repeat;
+  }
+
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after{
+    display: none;
+  }
+
+
+
+  .PosterInnerDiv{      /* 이미지 슬라이드 상세 내용 div */
+        margin-top: 30px;
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        color: white;
+  }
+
+
+  .PosterInnerDiv strong{     /* 이미지 슬라이드 상세 제목 */
+        font-size: 23px;
+        /*text-overflow: ellipsis;*/
+  }
+
+
+
+  .PosterInnerBox{      /* 포스터 호버시 나타나는 박스 */
+      position: absolute;
+      width: 100%;
+      height: 250px;
+  }
+
+
+  .swiper-slide .PosterInnerBox{   /* 포스터 감싸는 개별 박스 호버 시 나타나는 이미지 */
+    background-color: black;
+    width: 100%;
+    height: 250px;
+    bottom: -250px;
+    opacity: 0.7;
+    transition: .5s;
+  }
+
+
+  .swiper-slide:hover .PosterInnerBox{        /* 이미지 슬라이드 올라오기 */
+      bottom: 0;
+  }
+
+
+  .PosterInnerDirectDiv{       /* 바로가기 버튼 감싼 div */
+        position: absolute;
+        top: 130px;
+        width: 100%;
+        height: 100px;
+  }
+
+
+  .PosterDirectBtn{          /* 바로가기 버튼 div */
+        margin: 0 auto;
+        margin-top: 15px;
+        line-height: 60px;
+        width: 60px;
+        height: 60px;
+        border: 1px solid white;
+        border-radius: 50%;
+        color: white;
+        font-size: 13px;
+  }
+
+
+  .PosterInnerDirectDiv a{              /* a 링크 밑줄 없애기 */
+      text-decoration-line: none;
+  }
+
+
+  .scrollbarWrap{                   /* 스크롤바를 감싼 랩 */
+    position: absolute;
+    width: 900px;
+    height: 20px;
+    border: 1px solid black;
+    margin-left: 30px;
+  }
+
+
+  .swiper-scrollbar{                       /* 스와이퍼 스크롤바 */
+    width: 810px !important;
+  }
+
+
+  .swipernumWrap{
+    margin-left: 820px;
+    position: relative;
+    width: 80px;
+    height: 20px;
+    border: 1px solid palevioletred;
+  }
+
+
+  .loading-bar {
+      width: 100%;
+      height: 7px;
+      background-color: #eee;
+      border-radius: 5px;
+      overflow: hidden;
+      position: absolute;
+      bottom: 0;
+    }
+
+
+  .progress-bar {
+      width: 0;
+      height: 100%;
+      background-color: lightgray;
+      border-radius: 5px;
+      transition: width 0.3s ease-in-out;
+    }
+
+
+  </style>
+
+</head>
+<body>
+
+
+  <div class="PosterBigWrap">
+
+
+  <div class="swiper-container">
+
+    <div class="swiper-button-prev"></div>
+
+
+    <div class="swiper-wrapper">
+      <!-- 추가적인 슬라이드 -->
+      <div class="swiper-slide" id="changeNextBg()">
+
+        <div class="PosterInnerBox">
+
+          <div class="PosterInnerDiv">
+            <strong>브루어리 탐험대 펍크롤링</strong>
+            <br>
+            <span>부산 부산진구</span>
+            <br>
+            <em>2023. 6. 24. ~ 2023. 11. 25.</em>
+          </div>
+
+
+          <div class="PosterInnerDirectDiv">
+
+            <a href=""><div class="PosterDirectBtn">바로가기</div></a>
+  
+          </div>
+
+
+        </div>
+          
+      </div>
+
+
+      <div class="swiper-slide"  id="changeNextBg()">
+
+        <div class="PosterInnerBox">
+
+        <div class="PosterInnerDiv">
+            <strong>2023 아세안 요리교실</strong>
+            <br>
+            <span>부산 해운대구</span>
+            <br>
+            <em>2023. 9. 1. ~ 2023. 11. 18.</em>
+        </div>
+
+
+        <div class="PosterInnerDirectDiv">
+
+          <a href=""><div class="PosterDirectBtn">바로가기</div></a>
+
+        </div>
+
+
+        </div>
+
+      </div>
+
+
+      <div class="swiper-slide"  id="changeNextBg()">
+
+        <div class="PosterInnerBox">
+
+        <div class="PosterInnerDiv">
+            <strong>브루어리 탐험대 양조장 투어</strong>
+            <br>
+            <span>부산 부산진구</span>
+            <br>
+            <em>2023. 6. 24. ~ 2023. 11. 25.</em>
+        </div>
+
+
+        <div class="PosterInnerDirectDiv">
+
+          <a href=""><div class="PosterDirectBtn">바로가기</div></a>
+
+        </div>
+
+
+        </div>
+
+      </div>
+
+
+      <div class="swiper-slide"  id="changeNextBg()">
+
+        <div class="PosterInnerBox">
+        
+        <div class="PosterInnerDiv">
+            <strong>2023 고흥 녹동항 드론쇼</strong>
+            <br>
+            <span>전남 고흥군</span>
+            <br>
+            <em>2023. 5. 1. ~ 2023. 11. 30.</em>
+        </div>
+
+
+        <div class="PosterInnerDirectDiv">
+
+          <a href=""><div class="PosterDirectBtn">바로가기</div></a>
+
+        </div>
+
+        </div>
+
+      </div>
+
+      <div class="swiper-slide"  id="changeNextBg()">
+        추가 슬라이드 5
+      </div>
+
+
+    </div>
+
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+  </div>
+
+
+  <div class="swiper-button-next"></div>
+  
+  <!-- 스크롤바랩 감싸기 -->
+  <div class="scrollbarWrap">
+    <div class="loading-bar">
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="swipernumWrap"></div>
+    </div>
+  </div>
+
+
+  </div>
+
+
+
+
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var mySwiper = new Swiper('.swiper-container', {
+      slidesPerView: 3, // 한 페이지에 보일 슬라이드의 수
+      spaceBetween: 10, // 슬라이드 간의 간격 (옵션)
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
+      },
+    });
+  </script>
+
+
+
+</body>
+
+
+<script>
+
+
+
+    /*슬라이드 이미지 배경 url*/
+    let SlideImg = ["https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&id=d5058811-3a87-49d7-a8b2-7f79f52a4d1c",
+                "https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&id=26095db3-991c-4e56-8a03-b26bbb17f44a",
+                "https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&id=f0eacc42-5eed-40f9-84c0-7d7468df4fce",
+                "https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&id=424b4fd1-37af-425e-bfa7-2dffbff26720"]; 
+
+   
+    //슬라이드 개수
+    let totalSlides = SlideImg.length;            
+
+
+   /*배경 이미지 변경 함수*/
+    function changeNextBg() {
+
+    
+      var slides = document.querySelectorAll(".swiper-slide");
+
+      
+      //반복문으로 각 슬라이드 배경 이미지 설정
+      for(let i=0; i < totalSlides; i++) {
+        slides[i].style.backgroundImage = "url(" + SlideImg[i] + ")";
+      }
+
+      
+  }
+
+
+  // 예시로 0번째 슬라이드에 배경 이미지 설정
+  changeNextBg();
+
+
+  //슬라이드 배경 이미지 변경 코드
+
+
+
+  let currentSlide = 0;
+  let totalSlide = document.querySelectorAll('swiper-slide').length;
+  let progressBar = document.getElementById('progressBar');
+
+
+  
+  function updateProgressBar() {
+    let progress = ((currentSlide + 1) / totalSlides) * 100;
+    progressBar.style.width = progress + "%";
+  }
+
+
+  function nextSlide() {
+    if (currentSlide < totalSlides - 1) {
+      currentSlide++;
+    } else {
+      currentSlide = 0;
+    }
+    updateProgressBar();
+    updateSlider();
+  }
+
+
+
+  function updateSlider() {
+    let slides = document.getElementById('swiper-slide');
+    slides.style.transform =  'translateX(' + (-currentSlide * 100) + '%)';
+
+  }
+
+
+    // 다음 슬라이드로 이동하는 함수를 호출하여 초기화합니다.
+    nextSlide();
+
+
+    // 슬라이드를 변경할 때마다 로딩바를 업데이트합니다.
+    document.getElementById('slider-container').addEventListener('transitionend', function () {
+      updateProgressBar();
+    });
+
+
+      // 슬라이드를 변경하는 간격을 조절할 수 있습니다.
+      setInterval(nextSlide, 3000);
+
+
+</script>
+
+</html>
