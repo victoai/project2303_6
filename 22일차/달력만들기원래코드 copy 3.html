@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .DateDivWrap {
+            width: 940px;
+            border: 1px solid slateblue;
+            height: 80px;
+        }
+
+        .DateDiv {
+            margin: 0 auto;
+            width: 880px;
+            border: 1px solid black;
+            height: 80px;
+            display: flex;
+        }
+
+        .DateBtnDiv {
+            width: 30px;
+            height: 80px;
+            border: 1px solid saddlebrown;
+        }
+
+        .DateBtnDiv img {
+            margin-left: 5px;
+            width: 10px;
+            height: 18px;
+            margin-top: 30px;
+        }
+
+        .DateSelectDiv {
+            width: 930px;
+            height: 80px;
+            border: 1px solid darkgreen;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .DateNum {
+            width: 40px;
+            height: 40px;
+            border: 1px solid red;
+            border-radius: 10px 10px 0 0;
+            text-align: center;
+            line-height: 4px;
+        }
+
+
+        .DateNum p{
+            font-size: 16px;
+        }
+
+
+        .DateDayWeek {
+            width: 40px;
+            height: 35px;
+            border: 1px solid blue;
+            border-radius: 0 0 10px 10px;
+            text-align: center;
+            line-height: 1.5px;
+        }
+
+
+        .DateDayWeek p{
+            font-size: 16px;
+        }
+
+        .DateEachCircle {
+            width: 40px;
+            height: 80px;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+
+        .DateEachCircle:hover {
+            width: 40px;
+            height: 80px;
+            background-color: lightgray;
+            opacity: 60;
+            border-radius: 10px;
+        }
+
+
+        .DateEachCircle:nth-child {
+            line-height: 30px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="DateDivWrap">
+
+        <div class="DateDiv">
+
+            <div class="DateBtnDiv" onclick="prevDate()"><img src="https://cdn.visitkorea.or.kr/resources/images/submain/btn_calendar_prev.png" alt=""></div>
+
+            <div class="DateSelectDiv">
+
+                <div class="DateEachCircle">
+                    <div class="DateNum"></div>
+                    <div class="DateDayWeek"></div>
+                </div>
+
+                <div class="DateEachCircle">
+                    <div class="DateNum"></div>
+                    <div class="DateDayWeek"></div>
+                </div>
+
+                <div class="DateEachCircle">
+                    <div class="DateNum"></div>
+                    <div class="DateDayWeek"></div>
+                </div>
+
+                <div class="DateEachCircle">
+                    <div class="DateNum"></div>
+                    <div class="DateDayWeek"></div>
+                </div>
+
+
+                <div class="DateEachCircle">
+                    <div class="DateNum"></div>
+                    <div class="DateDayWeek"></div>
+                </div>
+
+
+                <div class="DateEachCircle">
+                    <div class="DateNum"></div>
+                    <div class="DateDayWeek"></div>
+                </div>
+
+
+                <div class="DateEachCircle">
+                    <div class="DateNum"></div>
+                    <div class="DateDayWeek"></div>
+                </div>
+
+
+                <div class="DateEachCircle">
+                    <div class="DateNum"></div>
+                    <div class="DateDayWeek"></div>
+                </div>
+
+
+                <div class="DateEachCircle">
+                    <div class="DateNum"></div>
+                    <div class="DateDayWeek"></div>
+                </div>
+
+
+                <div class="DateEachCircle">
+                    <div class="DateNum"></div>
+                    <div class="DateDayWeek"></div>
+                </div>
+
+
+                <div class="DateEachCircle">
+                    <div class="DateNum"></div>
+                    <div class="DateDayWeek"></div>
+                </div>
+
+
+                <div class="DateEachCircle">
+                    <div class="DateNum"></div>
+                    <div class="DateDayWeek"></div>
+                </div>
+
+
+                <div class="DateEachCircle">
+                    <div class="DateNum"></div>
+                    <div class="DateDayWeek"></div>
+                </div>
+
+
+                <div class="DateEachCircle">
+                    <div class="DateNum"></div>
+                    <div class="DateDayWeek"></div>
+                </div>
+                
+                <div class="DateBtnDiv" onclick="nextDate()"><img src="https://cdn.visitkorea.or.kr/resources/images/submain/btn_calendar_next.png" alt=""></div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+
+        // 초기 날짜를 설정
+        let currentDate = new Date();
+
+
+        // 오늘 일자 불러오기
+        let today = currentDate.getDate();
+        console.log(today);
+
+
+        //현재 1, 2, 3월... 불러오기
+        let month = currentDate.getMonth() + 1;
+        console.log(month);
+
+
+        //date객체의 오늘 요일 구하기, (월요일 뜸)
+        let weekday = ['일', '월', '화', '수', '목', '금', '토'];
+        console.log(weekday[currentDate.getDay()]);
+        
+        
+        // 3개월까지의 날짜 노출시키기 위한 총 변수 횟수
+        let nextcnt=0;
+        let prevcnt=0;
+
+
+
+        document.querySelectorAll('.DateEachCircle').forEach(function (element) {
+
+
+                element.querySelector('.DateNum').innerHTML = '<p>' + currentDate.getDate() +'</p>';
+                element.querySelector('.DateDayWeek').innerHTML = '<p>' + weekday[currentDate.getDay()] + '</p>';
+
+
+                currentDate.setDate(currentDate.getDate() + 1);
+                
+        });
+
+
+
+
+        function nextDate() {
+
+
+            //이전에 표시된 일자, 요일 정보 지우기
+            document.querySelector('.DateNum').innerHTML = '';
+            document.querySelector('.DateDayWeek').innerHTML = '';
+
+                document.querySelectorAll('.DateEachCircle').forEach(function (element) {
+
+                element.querySelector('.DateNum').innerHTML = '<p>' + currentDate.getDate() +'</p>';
+                element.querySelector('.DateDayWeek').innerHTML = '<p>' + weekday[currentDate.getDay()] + '</p>';
+
+                currentDate.setDate(currentDate.getDate() + 1);
+
+                });
+
+        }
+
+
+        function prevDate() {
+
+            //이전에 표시된 날짜 정보 -10 하기
+            alert("이전 버튼 클릭");
+            currentDate.setDate(currentDate.getDate() - 14);
+
+
+            document.querySelector('.DateNum').innerHTML = '';
+            document.querySelector('.DateDayWeek').innerHTML = '';
+
+
+            document.querySelectorAll('.DateEachCircle').forEach(function (element) {
+
+                element.querySelector('.DateNum').innerHTML = '<p>' + currentDate.getDate() +'</p>';
+                element.querySelector('.DateDayWeek').innerHTML = '<p>' + weekday[currentDate.getDay()] + '</p>';
+
+                currentDate.setDate(currentDate.getDate() + 1);
+
+            });
+
+
+        }
+
+
+    </script>
+</body>
+</html>

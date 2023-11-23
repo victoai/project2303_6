@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- jQuery를 불러오기 -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+
+<!-- 대상이 될 요소 -->
+<div id="myElement">내 요소</div>
+
+<!-- jQuery 코드 -->
+<script>
+    // jQuery를 사용하여 ID 변경
+    $(document).ready(function() {
+        $('#myElement').attr('id', 'newElementId');
+    });
+</script>
+
+</body>
+</html>
+
+
+
+////////
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+</head>
+<body>
+
+ 
+<div id="myElement">내 요소</div>
+
+<!-- JavaScript 코드 -->
+<script>
+   
+    var myElement = document.getElementById('myElement');   
+    myElement.id = 'newElementId';
+</script>
+
+</body>
+</html>

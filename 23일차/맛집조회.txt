@@ -1,0 +1,60 @@
+select   s.SidoCode  SidoCode ,   s.nickName  nickName, f.CONTENTID  CONTENTID, f.TITLE  TITLE, f.SIGUNGUCODE  SIGUNGUCODE  ,  f.SEARCHCOUNT       SEARCHCOUNT      
+FROM FamousRestTbl f             
+JOIN SidoTbl s ON s.SidoCode = f.sidoCode  
+order by f.SEARCHCOUNT  ;  
+          
+ 
+ -- 각 각 조회         
+ select  *   from  FamousRestTbl;  
+ select  *   from  SidoTbl;
+ 
+ 
+-- 조인조회
+
+
+  select   *     
+  FROM FamousRestTbl f             
+  JOIN SidoTbl s ON s.SidoCode = f.sidoCode   ;
+ 
+ 
+ --
+
+  select   s.SidoCode  SidoCode ,   s.nickName  nickName, f.CONTENTID  CONTENTID, f.TITLE  TITLE, 
+           f.SIGUNGUCODE  SIGUNGUCODE  ,  f.SEARCHCOUNT       SEARCHCOUNT      
+  FROM FamousRestTbl f             
+  JOIN SidoTbl s ON s.SidoCode = f.sidoCode  
+  order by f.SEARCHCOUNT    ;
+  
+   
+        
+        
+-- 조회시 rownum   select시 순번을 자동으로 붙여줌 
+select    rownum num   ,   SidoCode,nickName , CONTENTID, TITLE, SIGUNGUCODE,SEARCHCOUNT
+ from 
+ ( 
+    select   s.SidoCode  SidoCode ,   s.nickName  nickName, f.CONTENTID  CONTENTID, f.TITLE  TITLE, 
+             f.SIGUNGUCODE  SIGUNGUCODE  ,  f.SEARCHCOUNT       SEARCHCOUNT      
+    FROM FamousRestTbl f             
+    JOIN SidoTbl s ON s.SidoCode = f.sidoCode  
+    order by f.SEARCHCOUNT    
+   )  ;
+   
+   
+  
+  
+  -- rowm 기준으로  10개씩 
+  select  *
+  from
+  (
+     select    rownum num   ,   SidoCode,nickName , CONTENTID, TITLE, SIGUNGUCODE,SEARCHCOUNT
+     from
+     ( 
+        select   s.SidoCode  SidoCode ,   s.nickName  nickName, f.CONTENTID  CONTENTID, f.TITLE  TITLE, 
+                 f.SIGUNGUCODE  SIGUNGUCODE  ,  f.SEARCHCOUNT       SEARCHCOUNT      
+        FROM FamousRestTbl f             
+        JOIN SidoTbl s ON s.SidoCode = f.sidoCode  
+        order by f.SEARCHCOUNT    
+       )
+   
+  )  where   num  between  1 and 10 ;
+  

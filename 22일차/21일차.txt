@@ -1,0 +1,12 @@
+서블릿버전 3.1 변경
+
+https://ehdals9412.tistory.com/43
+
+
+--3가지 정보 변경
+pom 에서  dependency  3.1.0 변경
+web.xml에서 DTD  3.1 변경
+프로젝트  -> project  facets  -> dynamic web module -> 3.1  java version =11
+
+
+

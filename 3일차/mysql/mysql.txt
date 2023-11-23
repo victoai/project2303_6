@@ -49,3 +49,14 @@ select * from users where id= '1';
 
 
 
+
+mysql 삭제시
+프로그램추가제거 mysql관련 모두 삭제
+c:programData에서 mysql  폴더삭제하기
+
+
+설치해야함
+
+
+
+

@@ -1,0 +1,13 @@
+public class Main {
+    public static void main(String[] args) {
+        String inputString = "example.com.com";
+        int index = input.lastIndexOf('.');
+        
+	String result="";
+        if (index != -1) {            
+              result = input.substring(0, index);
+        }        
+    }
+
+    
+}
